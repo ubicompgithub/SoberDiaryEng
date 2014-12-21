@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test_guide_msg">
+        <item>The strongest man in the world\nis he who stands alone.</item>
+		<item>This world is but canvas\nto our imaginations.</item>
+		<item>Anybody can do anything\nthat he imagines.</item>
+		<item>Trouble is only opportunity\nin work clothes.</item>
+		<item>A man\'s true state of power\nand riches is to be in himself.</item>
+		<item>Ones best success comes after\ntheir greatest disappointments.</item>
+		<item>He who believes is strong.\nStrong convictions precede great actions.</item>
+		<item>Facing it, always facing it,\nthat\'s the way to get through.\nFace it.</item>
+		<item>Expect the dawn of a new beginning\nin the dark nights of life.</item>
+		<item>You may have to fight a battle\nmore than once to win it.</item>
+		<item>A good goal is like a strenuous exercise\n-- it makes you stretch.</item>
+		<item>When you come to a roadblock,\ntake a detour.</item>
+		<item>The greater the obstacle,\nthe more glory in overcoming it.</item>
+		<item>Ability has nothing to do with opportunity.</item>
+		<item>Whatever your mind can conceive\nand believe, it can achieve.</item>
+		<item>The only lack or limitation\nis in your own mind.</item>
+		<item>We tend to get what we expect.</item>
+		<item>A hero is one who knows how to\nhang on one minute longer.</item>
+		<item>Faith will move mountains.</item>
+		<item>We become what we think about\nall day long.</item>
+		<item>The reward of a thing well done\nis to have done it.</item>
+		<item>Begin at once to live,\nand count each day as a separate life.</item>
+		<item>Opportunities multiply as\nthey are seized.</item>
+		<item>The harder the conflict, \nthe more glorious the triumph</item>
+		<item>The secret to achieve true success\nis found in your daily routine.</item>
+		<item>The price of greatness\nis responsibility.</item>
+		<item>I am an optimist.\nIt does not seem too much use being anything else.</item>
+    </string-array>
+</resources>

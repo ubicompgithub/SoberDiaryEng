@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="question_type0_help">For your family and a diff-\nerent self. Continue to work hard and never give up!</string>
+    <string name="question_type1_help">Stabilize floating emotions and be determined to stay sober. Please do:</string>
+    <string name="question_type2_help">You seem to experience periods of relapsing. Please do:</string>
+    <string name="question_type3_help">You seem to drink a lot of alcohol. Please do:</string>
+    <string name="breath_help">Focus on breathing\nfor 30 s</string>
+    <string name= "breath_check_help">I\'ll finish focusing on breathing</string>
+    <string name="inspire_help">Meditate on an inspira-\ntional quote for 30 s</string>
+    <string name="start_emotion_diy_help">Prevent alcohol cravings using Skill Suggestion</string>
+    <string name="read_sentence">Read heart-warming words to change your mood</string>
+    <string name="try_again">Re-test after the breathalyzer recovers</string>
+    <string name="self_help">Handle and face the problem on your own</string>
+    <string name="go_home">Go home and rest</string>
+    
+    <string name="follow_the_guide">Follow instructions...</string>
+
+    <string-array name="question_solutions">
+        <item>Immediately leave the place with alcohol</item>
+        <item>I\'ve already decided to stop drinking alcohol</item>
+        <item>Please exercise walking for 10 ~ 30 m</item>
+        <item>Please focusing on breathing 15 times</item>
+        <item>Please take a rest or seek medical advice</item>
+        <item>Do nothing</item>
+    </string-array>
+    
+    <string name="follow_the_guide_music">Close your eyes and listen relaxing musics</string>
+    
+    <string name="self_help_help">What\'s your current condition?</string>
+    <string name="self_help_selection0">Possess alcoholic beverages</string>
+    <string name="self_help_selection1">Desire to buy alcoholic beverages</string>
+    <string name="self_help_selection2">Feeling bored</string>
+    <string name="self_help_selection3">Feeling stressed</string>
+    <string name="self_help_selection4">Don’t feel well</string>
+    <string name="self_help_selection5">Other conditions</string>
+</resources>

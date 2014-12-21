@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SOBERDIARY 2</string>
+    <string name="loading">Loading...</string>
+    <string name="brac">BrAC</string>
+    <string name="start">START</string>
+    <string name="recoverying">Recovering...</string>
+    <string name="morning">MRNG</string>
+    <string name="morning_time">0&#8211;12</string>
+    <string name="noon">AFTN</string>
+    <string name="noon_time">12&#8211;20</string>
+    <string name="night">NGT</string>
+    <string name="night_time">20&#8211;24</string>
+    <string name="today_test">DAILY\nDASHBOARD</string>
+    <string name="today_test_none">No test result</string>
+    <string name="week_test">WEEKLY SUMMARY</string>
+    <string name="month_test">MONTHLY SUMMARY</string>
+    <string name="morning_short">MRNG</string>
+    <string name="noon_short">AFTN</string>
+    <string name="night_short">NGT</string>
+    <string name="test_pass">Pass</string>
+    <string name="test_fail">No Pass</string>
+    <string name="test_none">Skipped</string>
+    <string name="done">DONE</string>
+    <string name="storytelling_page_help">Week</string>
+    <string name="emotion">Emotion</string>
+    <string name="emotion_short">Emotion</string>
+    <string name="craving">Craving</string>
+    <string name="craving_short">Craving</string>
+    <string name="brac_result">BrAC</string>
+    <string name="brac_result_short">BrAC</string>
+    <string name="total_result">Overall</string>
+    <string name="analysis_counter">Credit Earned</string>
+    <string name="analysis_saving">Money Saved</string>
+    <string name="analysis_rank">Rankings</string>
+    <string name="high">High</string>
+    <string name="low">Low</string>
+    <string name="after_test_pass">Well done!</string>
+    <string name="after_test_fail">Don\'t give up!</string>
+    <string name="after_questionnaire">Keep up the hard work!</string>
+
+    <string-array name="emotion_state">
+        <item>Very sad</item>
+        <item>Sad</item>
+        <item>Neutral</item>
+        <item>Happy</item>
+        <item>Very happy</item>
+    </string-array>
+    <string-array name="craving_state">    
+        <item>Not at all\n </item>
+        <item>Very slightly\n </item>
+        <item>Slightly\n manageable</item>
+        <item>A little\n tempted</item>
+        <item>Somewhat\n restless</item>
+        <item>Moderately\n eager to buy</item>
+        <item>Quite a bit\n buy later</item>
+        <item>Very\n like to drink</item>
+        <item>Very much\n pause &amp; drink</item>
+        <item>Extremely\n drink now!</item>
+    </string-array>
+
+    <string name="wait">Please wait...</string>
+    <string name="msg_box_title">UNDERSTAND YOURSELF</string>
+    <string name="msg_box_help1">Emotion Index</string>
+    <string name="msg_box_help2">Craving Index</string>
+    <string name="msg_box_help3">Upload your current location?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="send">SEND</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="msg_box_toast_cancel">Continue to give up filling the form? continue?</string>
+    <string name="msg_box_toast_send">Complete the form.</string>
+    <string name="notification_msg_1">It\'s time to perform a test</string>
+
+    <string name="test_guide_start_top">Click the \'Start\' button</string>
+    <string name="test_guide_start_bottom">Not Started</string>
+    
+    <string name="test_guide_reset_top">Long press the breathalyzer\'s switch</string>
+    <string name="test_guide_reset_bottom">Turn on the breathalyzer</string>
+    
+    <string name ="test_guide_init_top">Please wait. Initializing the breathalyzer</string>
+    <string name="test_guide_init_bottom">Breathalyzer is on</string>
+    
+    <string name="test_guide_testing_top">Facing the camera and then blow.</string>
+    <string name="test_guide_testing_bottom">Breathalyzer is ready</string>
+    
+    <string name="test_guide_pair_top">Configure your Bluetooth connetion</string>
+    <string name="test_guide_pair_bottom">Bluetooth connection error!</string>
+    
+    <string name="test_guide_update_top">Complete a re-test before timeout occurs</string>
+    <string name="test_guide_update_bottom">Counting down for re-testing</string>
+    
+    <string name="test_guide_recovery_top">Please wait</string>
+    <string name="test_guide_recovery_bottom">Breathalyzer is recovering</string>
+    
+    <string name="test_guide_recovery_update_top">Finish the re-test ASAP once the breathalyzer is ready</string>
+    <string name="test_guide_recovery_update_bottom">Breathalyzer is recovering</string>
+    
+    <string name="test_guide_not_turn_on">Breathalyzer is off</string>
+    <string name="test_guide_test_fail">Breathalyzer is out of power</string>
+    <string name="test_guide_test_timeout">Test timeout!</string> 
+    <string name="test_guide_connect_fail">Bluetooth connection failed</string> 
+    <string name="test_guide_multi_blow">Breathalyzer failed due to an unsteady breath</string>
+    <string name="test_guide_zero_duration">Connection failed. Please reboot the breathalyzer &amp; phone.</string>
+    <string name="test_guide_pressure_error">Breathalyzer malfunctioned. Please contact the developer.</string>
+    <string name="test_guide_high_initial">Breathalyzer is recovering. Turn it on and put it in a dry and ventilated place for 2 mins. </string>
+    
+    <string name="test_guide_msg_box">Follow instructions</string>
+    
+    <string name="test_guide_end">Click the \'OK\' button</string>
+    
+    <string name="tutorial_next">Tap the screen to proceed</string>
+
+    <string-array name="tutorial_step">
+        <item>Long press the switch \nuntil the red light is on.</item>
+        <item>Enter the test page and \nclick the \'start\' button.</item>
+        <item>Steadly blow air into \nthe straw for 5 seconds.</item>
+    </string-array>
+    <string name="tutorial_step1">Long press the switch \nuntil the red light is on.</string>
+    <string name="tutorial_step2">Enter the test page and \nclick the \'start\' button.</string>
+    <string name="tutorial_step3">Steadly blow air into \nthe straw for 5 seconds.</string>
+
+    <string name="year">Year</string>
+    <string name="january">Jan</string>
+    <string name="february">Feb</string>
+    <string name="march">Mar</string>
+    <string name="april">Apr</string>
+    <string name="may">May</string>
+    <string name="june">Jun</string>
+    <string name="july">Jul</string>
+    <string name="august">Aug</string>
+    <string name="september">Sep</string>
+    <string name="october">Oct</string>
+    <string name="november">Nov</string>
+    <string name="december">Dec</string>
+    <string name="day">Day</string>
+    <string name="dot">.</string>
+
+    <string name="analysis_counter_help">Earned:</string>
+	<string name="analysis_counter_counter">credit(s)</string>
+	<string name="analysis_counter_coupon">coupon(s)</string>
+    
+    <string name="analysis_saving_help">Total:&#160;</string>
+	
+    <string name="analysis_rank_month_help">Overall Rankings:&#160;</string>
+    <string name="analysis_rank_week_help">Weekly Rankings:&#160;</string>
+    
+    <string-array name="analysis_rank_change_help">
+        <item>First rank</item>
+        <item>Second rank</item>
+        <item>Third rank</item>
+        <item></item>
+        <item>Advanced!</item>
+        <item>Degenerated!</item>
+    </string-array>
+        
+
+    <string name="dollor_sign">$</string>
+    <string name="audio_box_toast_timeup">One minute.</string>
+    <string name="audio_box_toast_record_end">Stop recording</string>
+    <string name="audio_box_toast_play_end">Stop playing</string>
+    <string name="audio_box_playing">Playing</string>
+    <string name="audio_box_recording">Recording</string>
+    <string name="audio_box_preparing">Preparing</string>
+    <string name="total">Total</string>
+    <string name="minute">min</string>
+    <string name="second">sec</string>
+
+    <string-array name="audio_box_help">
+        <item>Record or listen</item>
+        <item>\'s feelings\n(Max 1 min)</item>
+    </string-array>
+
+    <string name="quote_next_message">Click here for extensive learning.</string>
+    <string name="call_to">Call who?</string>
+    <string name="next">NEXT</string>
+
+    <string name="connect_to_family">Chat with family or friends</string>
+    <string name="connect_for_social_help">Seek community counseling</string>
+    <string name="connect_to_emotion_hot_line">Call emergency hotlines</string>
+    <string name="connect_null">No contact</string>
+
+    <string name="call_check_help_emotion_hot_line">Dial the hotline?</string>
+    <string name="call_check_help">Continue to dial out to </string>
+    <string name="question_sign">\?</string>
+    
+    <string name="about_title">About</string>
+    <string name="about_help">Info:</string>
+    <string name="about_setting">Settings:</string>
+    <string name="about_time_gap">Set test reminders that pop for:</string>
+    <string-array name="setting_time_gap">
+        <item>Every 30 minutes</item>
+        <item>Every 60 minutes</item>
+        <item>Every 120 minutes</item>
+        <item>Turn off</item>
+    </string-array>
+
+    <string-array name="about_message">
+        <item>SoberDiary is jointly developed by</item>
+        <item>.</item>
+        <item>The goal of SoberDiary is to assist alcohol dependent patients to self-monitor and manage their alcohol use.</item>
+        <item>A customized Bluetooth breathalyzer is required to use this app.</item>
+        <item>Interface design:&#160;</item>
+        <item>Illustration:&#160;</item>
+        <item>Page coloring:&#160;</item>
+    </string-array>
+
+    <string name="phone">Contact:</string>
+    <string name="phone_number"><u>(02)3366-4926</u></string>
+    <string name="phone_check">Continue to dial out?</string>
+    <string name="comma">,&#160;</string>
+    <string name="ntu">National Taiwan University</string>
+    <string name="intel_ntu">Intel-NTU Connected Context Computing Center</string>
+    <string name="taipei_city_hospital">Taipei City Hospital Songde Branch</string>
+    <string name="happ_design">happdesign.com</string>
+    <string name="rickie_wu">Rickie Wu</string>
+    <string name="yuda_huang">Yuga Huang</string>
+    <string name="current_version">Current version:&#160;</string>
+    <string name="testTimeCheckToast">The breathalyzer is recovering.</string>
+    <string name="self_help_counter_unit">credit(s)</string>
+    <string name="get_self_help_counter">+1 credit</string>
+    
+    <string name="emotion_box_playing">Playing</string>
+    <string name="emotion_box_pause">Stopped</string>
+    <string name="emotion_box_replay">Play again?</string>
+    
+    <string name="default_recreation_1">Listen to music</string>
+    <string name="default_recreation_2">Jogging</string>
+    <string name="default_recreation_3">Play ball games</string>
+    <string name="default_goal_good">Motorcycle</string>
+    <string name="default_forbidden">You don\'t participate in the study, \nso can\'t perform tests.</string>
+    <string name="open_gps">Please grant the permission to access your location.</string>
+    <string name="check_do_not_keep_activities">You have turned on \'Don\'t keep activities\' and turned off \'Location access\' options.\n Please go to the setting page (\'Settings\'->\'Developer options\') to uncheck the \'Don\'t keep activities\' option.\n The app won\'t report your location associated with the current test.</string>
+    <string name="email"><u>ubicomplab.ntu@gmail.com</u></string>
+    <string name="email_subject">[SoberDiary]Issue reporting.</string>
+    <string name="email_message">How to send emails?</string>
+    <string name="email_reject">Please don\'t send mails if you don\'t \nparticipate in this study.</string>
+    <string name="email_fail">You didn\'t install any email client.</string>
+    <string name="website"><u>Related knowledge</u></string>
+
+    <string name="know">GOT IT</string>
+    <string name="bonus">Special rewards.</string>
+
+    <string name="lock_message">Congratulations on completing 3-month intervention study. Thank you for the cooperations during the study and hope you can continue to maintain sober in the future!\n\n Because of the requirement of the study, you have to stop using the SoberDiary app for the following 3 months. In this following 3 months, please regularly revist the hospital for following medical reviews. Thank you again for your cooperations.\n\n You can choose either to uninstall the app from your phone or temporarily keep the app in your phone. After complete the following 3 months, you can contact us by dialing the phone number shown in the "About" page. We can unlock the app for you to use. Thanks! \n\n Best regards, \n\n SoberDiary development team</string>
+    <string name="lock_about">SoberDiary Locked!</string>
+    <string name="radar_title">MY PERFORMANCE\nANALYSIS</string>
+    <string name="radar_label0">Alcohol\nscreening</string>
+    <string name="radar_label0_full">ALCOHOL SCREENING</string>
+    <string name="radar_label0_0">Performance of alcohol screening</string>
+    <string name="radar_label1">Self-\nadjustment</string>
+    <string name="radar_label1_full">SELF-ADJUSTMENT</string>
+    <string name="radar_label1_0">Quick self-adjustment</string>
+    <string name="radar_label1_1">Skill Suggestion</string>
+    <string name="radar_label2">Self-\nmanagement</string>
+    <string name="radar_label2_full">SELF-MANAGEMENT</string>
+    <string name="radar_label2_0">Feeling recording</string>
+    <string name="radar_label2_1">Mood sampling</string>
+    <string name="radar_label2_2">Momentary feedback</string>
+    <string name="radar_label3">Self-\nfulfilling</string>
+    <string name="radar_label3_full">SELF-FULFILLING</string>
+    <string name="radar_label3_0">Read the self-fulfilling guide</string>
+    <string name="radar_label3_1">Self-test and opinions towards self-fulfilling sentences</string>
+    <string name="radar_label3_2">Facebook sharing</string>
+    
+    <string name="percentage">%</string>
+    
+    <string-array name="radar_0">
+        <item>Regularly completing tests is a key to self-monitor your alcohol use</item>
+        <item>Once completing a test, use Self-Adjustment function to assist yourself</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_1_0">
+        <item>Once completing a test, click the \'!\' sign to seek for quick self-adjustment tips</item>
+        <item>Once completing a test, use Self-Adjustment function to read inspirational quotes or seeks advises</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_1_1">
+        <item>Always consult SoberDiary for relapse prevention or handling skills.</item>
+        <item>When you\'re in a bad mood, use Skill Suggestion function to help relieve you ease</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_2_0">
+        <item>SoberDiary can help you record your feelings everyday.</item>
+        <item>Record your feelings to better understand yourself.</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_2_1">
+        <item>SoberDiary can help you log triggers changing your mood everyday.</item>
+        <item>Log triggers changing your mood to break negative feedback loops.</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_2_2">
+        <item>Respond the questionnaire every night to help you immediately understand yourself.</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_3_0">
+        <item>Read the self-fulfilling guide everyday to extend your knowledge!</item>
+        <item>Frequently read the self-fulfilling guides to identify positive concepts!</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_3_1">
+        <item>Click the tag at the upper-right corner to test if you can remember the sentences.</item>
+        <item>Not sure about the answer?? Just read the self-fulfilling guide again.</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string-array name="radar_3_2">
+        <item>Each week you can share your achievements on Facebook.</item>
+        <item>Well done, keep work hard!!</item>
+    </string-array>
+    
+    <string name="homepage">http://mll.csie.ntu.edu.tw/soberdiary/</string>
+    <string name="uploading">Uploading...</string>
+    
+
+    <string name="storytelling_test_title">Self-test and opinions towards those sentences</string>
+    <string name="storytelling_test_question">Fill up the missing word in the following sentence?</string>
+    <string name= "storytelling_test_agreement">How much you agree with this sentence?</string>
+    <string-array name="agreement">
+        <item>Strongly disagree</item>
+        <item>Disagree</item>
+        <item>Neutral</item>
+        <item>Agree</item>
+        <item>Strongly agree</item>
+    </string-array>
+	<string name="storytelling_test_toast">You didn\'t select an answer.</string>
+	<string name="storytelling_test_correct">You are right!</string>
+	<string name="storytelling_test_incorrect">Wrong answer. please try again!</string>
+    
+	<string name="record_title">SELF-MANAGEMENT</string>
+	<string name="voice_main_help">Recording</string>
+	<string name="em_main_help">Mood Sampling</string>
+	<string name="emotion_manage_history_title">Mood Sampling</string>
+	<string name="emotion_manage_history_help">My record:</string>
+	<string name="additional_questionnaire_toast">Thanks for your input.</string>
+	<string name="additional_questionnaire_help">Scroll the bars to provide your emotion and craving indices.</string>
+	<string name="additional_questionnaire_title">Providing momentary feedback</string>
+    <string name="today">Today</string>
+	
+	<string name="gcm_title">Notification</string>
+	<string name="sensor_wait">The breathalyzer is recovering. Please try again!</string>
+	<string name="sensor_wait_try_again">After the breathalyzer is recovered, please try again!</string>
+	<string name= "try_again_test_help">Once count to zero, please try again!</string>
+	
+	<string name="try_again_toast">Follow instructions to re-test ASAP.</string>
+	<string name="feedback_help">Record the cause of doing re-test:</string>
+	<string name="feedback_skip">Skip</string>
+	<string name="feedback_record_again">Record again</string>
+	<string name="feedback_record_toast">Thank you for informing the cuase?</string>
+	<string name="feedback_record_help">Click the right \'Recording\' button to leave your message.</string>
+	
+	<string name="facebook_no_network">Enable the Internet connection before doing Facebook sharing.</string>
+	
+	<string name="goto_">GO TO</string>
+	
+	<string name="notification_title">Reminders</string>
+	<string-array name="notification_subtitles">
+	    <item>Alcohol use detection</item>
+	    <item>Providing momentary feedback</item>
+	    <item>Skill suggestion</item>
+	    <item>Feeling recording</item>
+	    <item>Mood sampling</item>
+	    <item>Self-fulfilling guide</item>
+	    <item>Facebook sharing</item>
+	    <item>Quick self-adjustment tips</item>
+	    <item>Self-test and opinions</item>
+	</string-array>
+	<string-array name="notification_comments">
+	    <item>Regularly performing alcohol tests is the first step to success.</item>
+	    <item>Filling questions in the dialog popped out every night helps you immediately understande yourself.</item>
+	    <item>Using the \"Skill-Suggestion\" function can help you to relieve your stress.</item>
+	    <item>Using the \"Feeling-Recording\" function can let you more understand yourself.</item>
+	    <item>Logging alcohol triggers using with the \"Mood-Sampling\" function can help you break negative feedback loops.</item>
+	    <item>Browse the self-fulfilling guide everyday. You will extend your knowledge. </item>
+	    <item>Do you want to share your achievements to friends through facebook?</item>
+	    <item>After completing tests, click the \"quick Self-Adjustment\" to get tips for maintaining sober.</item>
+	    <item>Fill opinions towards self-fulfilling sentences to test how well your understand or agree with those sentences.</item>
+	</string-array>
+	
+	<string name="edit">Edit</string>
+	<string name="setting_limit">Excuse me! You can select at most 3 options.</string>
+	<string name="story_test_cancel">CANCEL</string>
+	<string name="story_test_ok">SEND</string>
+</resources>

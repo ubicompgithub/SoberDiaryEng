@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emotionDIY_solution">
+        <item>Close your eyes and focus on\nlistening relaxing music</item>
+        <item>Close your eyes and focus on\nbreathing</item>
+        <item>Focus on exercising walking for\n10 ~ 30 mins</item>
+        <item>Perform recreational activities</item>
+        <item>Seek community counseling</item>
+        <item>Chat with family or friends</item>
+    </string-array>
+    
+    <string name="emotionDIY_title">SKILL SUGGESTION</string>
+    <string name="emotionDIY_help">Prevent or handle relapses ...</string>
+    <string name="emotionDIY_toast">Continue to give up using the skill suggestion function?</string>
+    <string name="emotion_end_message">Complete following suggestions. Keep working on it\n (Complete this to win credits in morning, afternoon, or night slot) </string>
+    <string name="emotion_connect_null">No contact\nPlease return</string>
+    <string name="emotion_manage_title0">FILL</string>
+    <string name="emotion_manage_title1">MOOD SAMPLING</string>
+    <string name="emotion_manage_toast">Continue to give up using mood sampling function?</string>
+    
+    <string name="emotionDIY_end_toast">Follow skill suggestions</string>
+    <string name="emotion_manage_end_toast">Complete mood sampling</string>
+    <string name="emotion_manage_check_toast">Remember to input emotional triggers</string>
+    <string name="emotionDIY_help_case0">Close your eyes and focuse on listening relaxing musics.</string>
+    <string name="emotionDIY_help_case1">Try to focus on breathing\nFollow guidance of the audio recording. </string>
+    <string name="emotionDIY_help_case2">Try to focus on exercising walking\nFollow guidance of the audio recording</string>
+    <string name="emotionDIY_help_case3">Perform one of the following recreational activities?</string>
+    <string name="emotionDIY_help_case3_2">No recreational activity. Please return</string>
+    <string name="emotionDIY_help_case4">You will do...</string>
+    <string name="emotionDIY_help_guide">Play instructions</string>
+    <string name="try_to_do">I\'ll finish the task</string>
+    
+    <string name="end">Finish</string>
+    <string name="check_end">Continue to finish?</string>
+    
+    <string-array name="emotion_manage_emotion">
+        <item>Happy</item>
+        <item>Excited</item>
+        <item>Feeling loved</item>
+        <item>Sad</item>
+        <item>Sentimental</item>
+        <item>Offended</item>
+        <item>Remorse</item>
+        <item>Oppressive</item>
+        <item>Fear</item>
+        <item>Worried</item>
+    </string-array>
+    <string-array name="emotion_manage_related">
+        <item>People</item>
+        <item>Event</item>
+        <item>Object</item>
+        <item>Current context</item>
+    </string-array>
+    
+    <string name="emotion_manage_help1">Your emotion at that time?</string>
+    <string name="emotion_manage_help2">What triggers this feeling?</string>
+    <string name="emotion_manage_help3">Please describe the </string>
+    <string name="emotion_manage_help4">This is a trigger for alcohol.\nBe sure to avoid this to maintain sobriety</string>
+    <string name="emotion_manage_input">Tap here to input</string>
+</resources>

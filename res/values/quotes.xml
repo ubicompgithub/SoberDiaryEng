@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="quote_title">Extension Studies</string>
+    <string-array name="quote_message">
+        <item>Alcohol is the worst enemy. Don\'t let it master you. Never give up!</item>
+        <item>You have been eager to step on the road to abstinence for a long time. You are on the way to achieve the goal and getting better and better.</item>
+        <item>Do not wait for your ship to come in - swim out to it.</item>
+        <item>You are aware that you are getting better through failure. Treasure each day that you stay sober.</item>
+        <item>You start to understand and love yourself. Your first and last love is self-love.</item>
+        <item>Let us not look back in anger nor forward in fear, but around in awareness.</item>
+        <item>You are rich or poor according to what you are, not according to what you has. You should be determined to keep yourself sober.</item>
+        <item>You are facing challenges of being sober. Face your deficiencies and acknowledge them, but do not let them master you.</item>
+        <item>You are a great believer in luck. You find that the harder you work on maintaining sobriety, the more sobriety you have.</item>
+        <item>You believe you don\'t have to be great to start, but you have to start to be great. </item>
+        <item>A good goal is like a strenuous exercise - it makes you stretch. </item>
+        <item>We make a living by what we get, but we make a life by what we give! </item>
+    </string-array>
+    <string-array name="quote_learning">
+        <item>Face the enemy and believe in yourself!</item>
+        <item>Be decided and hold out hope!</item>
+        <item>Be determined and take the initiative!</item>
+        <item>Self-acceptance and awareness!</item>
+        <item>Self-love and be kind to yourself!</item>
+        <item>Keep calm and cherish every momnet of life!</item>
+        <item>Be responsible and devote to maintain sober!</item>
+        <item>Be active to change and brave to face and accept yourself!</item>
+        <item>Perceive your physical and mental progreses!</item>
+        <item>keep going forward and understand yourself!</item>
+        <item>Keep working hard and be with steel determination!</item>
+        <item>Appreciate other people\'s help and give back to others!</item>
+    </string-array>
+    
+    <string-array name="quote_learning_extend">
+        <item>As you drink, the higher your BAC, the more impaired you become by alcohol\'s effects.</item>
+        <item>These alcohol\'s effects can include: reduced inhibitions, slurred speech, motor impairment, etc.</item>
+				<item>These alcohol\'s effects can include: Confusion, memory problems, concentration problems, etc.</item>
+				<item>These alcohol\'s effects can include: Coma, Breathing problems, Death, etc.</item>
+				<item>Alcohol dependence is a disease that includes four symptoms: craving, loss of control, physical dependence, and tolerance.</item>
+				<item>Risks of drinking can include: car crashes and other accidents, risky behavior, violent behavior, suicide and homicide.</item>
+				<item>People who drink too much over a long period of time may experience alcohol\'s longer-term effects, which can include: alcohol dependence, health problems, and increased risk for certain cancers.</item>
+				<item>People who are alcoholic often spend a great deal of their time drinking, making sure they can get alcohol, and recovering from alcohol\'s effects, often at the expense of other activities and responsibilities.</item>
+				<item>People who are alcoholic may not fulfill responsibilities at home, work, or school because of their drinking.</item>
+				<item>People who abuse alcohol may also put themselves in dangerous situations or have legal or social problems due to their drinking.</item>
+				<item>Cirrhosis is the 12th leading cause of death in the United States.</item>
+				<item>Among all cirrhosis deaths in 2009, 48.2 percent were alcohol related. </item>
+				<item>Liver transplantation does not cure alcoholism, as evidenced by the fact that roughly 20% of these patients use alcohol following transplant, with one third exhibiting \'repetitive or heavy drinking\'.</item>
+				<item>Globally, for persons aged 15-49 years the leading risk factor for death and disability was alcohol use.</item>
+				<item>More than 10 percent of U.S. children live with a parent with alcohol problems, according to a 2012 study.</item>
+    </string-array>
+    <string-array name="quote_question_0">
+        <item>Alcohol is the worst ___. Don\'t let it master you. Never give up!</item>
+        <item>Alcohol is the ___ enemy. Don\'t let it master you. Never give up!</item>
+        <item>Alcohol is the worst enemy. Don\'t let it master you. ___ give up!</item>
+    </string-array>
+    <string-array name="quote_answer_0">
+        <item>worst</item>
+        <item>honorable</item>
+        <item>cute</item>
+        <item>poor</item>
+        <item>friendly</item>
+        <item>enemy</item>
+        <item>parent</item>
+        <item>lover</item>
+        <item>friend</item>
+        <item>teacher</item>
+        <item>Never</item>
+        <item>Just</item>
+        <item>Do</item>
+        <item>Please</item>
+        <item>Could</item>
+    </string-array>
+    <string-array name="quote_question_1">
+        <item>You have been ___ to step on the road to abstinence for a long time. You are on the way to achieve the goal and getting better and better.</item>
+        <item>You have been eager to step on the road to ___ for a long time. You are on the way to achieve the goal and getting better and better.</item>
+        <item>You have been eager to step on the road to abstinence for a long time. You are on the way to ___ the goal and getting better and better.</item>
+    </string-array>
+    <string-array name="quote_answer_1">
+        <item>eager</item>
+        <item>apathetic</item>
+        <item>uneager</item>
+        <item>unwilling</item>
+        <item>reluctant</item>
+        <item>abstinence</item>
+        <item>failure</item>
+        <item>hell</item>
+        <item>depression</item>
+        <item>violence</item>
+        <item>achieve</item>
+        <item>fail</item>
+        <item>miss</item>
+        <item>lose</item>
+        <item>slur</item>
+    </string-array>
+    <string-array name="quote_question_2">
+        <item>Do not wait for your ___ to come in - swim out to it.</item>
+        <item>Do not ___ for your ship to come in - swim out to it.</item>
+        <item>Do not wait for your ship to come in - ___ out to it.</item>
+    </string-array>
+    <string-array name="quote_answer_2">
+        <item>ship</item>
+        <item>car</item>
+        <item>dog</item>
+        <item>cat</item>
+        <item>enemy</item>
+        <item>wait</item>
+        <item>rush</item>
+        <item>resist</item>
+        <item>resent</item>
+        <item>afraid</item>
+        <item>swim</item>
+        <item>jump</item>
+        <item>throw</item>
+        <item>fly</item>
+        <item>Sign</item>
+    </string-array>
+    <string-array name="quote_question_3">
+        <item>You are ___ that you are getting better through failure. Treasure each day that you stay sober.</item>
+        <item>You are aware that you are getting better through __. Treasure each day that you stay sober.</item>
+        <item>You are aware that you are getting better through failure. ___ each day that you stay sober.</item>
+    </string-array>
+    <string-array name="quote_answer_3">
+        <item>aware</item>
+        <item>doubted</item>
+        <item>insensible</item>
+        <item>oblivious</item>
+        <item>unaware</item>
+        <item>failure</item>
+        <item>success</item>
+        <item>victory</item>
+        <item>illusion</item>
+        <item>destruction</item>
+        <item>Treasure</item>
+        <item>Ignore</item>
+        <item>Waste</item>
+        <item>Overlook</item>
+        <item>Bypass</item>
+    </string-array>
+    <string-array name="quote_question_4">
+        <item>You start to understand and love yourself. Your first and last love is ___.</item>
+        <item>You start to understand and love ___. Your first and last love is self-love.</item>
+        <item>You start to understand and love yourself. Your first and last ___ is self-love.</item>
+    </string-array>
+    <string-array name="quote_answer_4">
+        <item>self-love</item>
+        <item>cheating</item>
+        <item>selfishness</item>
+        <item>antipathy</item>
+        <item>hate</item>
+        <item>yourself</item>
+        <item>blaming</item>
+        <item>cheating</item>
+        <item>destroying</item>
+        <item>failure</item>
+        <item>love</item>
+        <item>game</item>
+        <item>dream</item>
+        <item>farce</item>
+        <item>joke</item>
+    </string-array>
+    <string-array name="quote_question_5">
+        <item>Let us not look back in ___ nor forward in fear, but around in awareness.</item>
+        <item>Let us not look back in anger nor forward in ___, but around in awareness.</item>
+        <item>Let us not look back in anger nor forward in fear, but around in ___.</item>
+    </string-array>
+    <string-array name="quote_answer_5">
+        <item>anger</item>
+        <item>anxiety</item>
+        <item>joy</item>
+        <item>happiness</item>
+        <item>doubt</item>
+        <item>fear</item>
+        <item>joy</item>
+        <item>happiness</item>
+        <item>gratification</item>
+        <item>pleasure</item>
+        <item>awareness</item>
+        <item>anger</item>
+        <item>anxiety</item>
+        <item>doubt</item>
+        <item>fear</item>
+    </string-array>
+    <string-array name="quote_question_6">
+        <item>You are rich or poor according to what you ___, not according to what you has. You should be determined to keep yourself sober.</item>
+        <item>You are rich or poor according to what you are, not according to what you ___. You should be determined to keep yourself sober.</item>
+        <item>You are rich or poor according to what you are, not according to what you has. You should be determined to keep yourself ___.</item>
+    </string-array>
+    <string-array name="quote_answer_6">
+        <item>are</item>
+        <item>spend</item>
+        <item>speak</item>
+        <item>talk</item>
+        <item>has</item>
+        <item>has</item>
+        <item>are</item>
+        <item>spend</item>
+        <item>speak</item>
+        <item>listen</item>
+        <item>sober</item>
+        <item>sad</item>
+        <item>angry</item>
+        <item>busy</item>
+        <item>oppressive</item>
+    </string-array>
+    <string-array name="quote_question_7">
+        <item>You are facing ___ of being sober. Face your deficiencies and acknowledge them, but do not let them master you.</item>
+        <item>You are facing challenges of being sober. Face your ___ and acknowledge them, but do not let them master you.</item>
+        <item>You are facing challenges of being sober. Face your deficiencies and acknowledge them, but do not let them ___ you.</item>
+    </string-array>
+    <string-array name="quote_answer_7">
+        <item>challenges</item>
+        <item>solutions</item>
+        <item>advantages</item>
+        <item>efficiencies</item>
+        <item>accomplishments</item>
+        <item>deficiencies</item>
+        <item>efficiencies</item>
+        <item>accomplishments</item>
+        <item>motivations</item>
+        <item>advantages</item>
+        <item>master</item>
+        <item>face</item>
+        <item>copy</item>
+        <item>blame</item>
+        <item>like</item>
+    </string-array>
+    <string-array name="quote_question_8">
+        <item>You are a great ___ in luck. You find that the harder you work on maintaining sobriety, the more sobriety you have</item>
+        <item>You are a great believer in luck. You find that the ___ you work on maintaining sobriety, the more sobriety you have</item>
+        <item>You are a great believer in luck. You find that the harder you work on maintaining sobriety, the more ___ you have</item>
+    </string-array>
+    <string-array name="quote_answer_8">
+        <item>believer</item>
+        <item>loser</item>
+        <item>adversary</item>
+        <item>opposer</item>
+        <item>rival</item>
+        <item>harder</item>
+        <item>easier</item>
+        <item>less</item>
+        <item>simpler</item>
+        <item>quicker</item>
+        <item>sobriety</item>
+        <item>intemperance</item>
+        <item>wildness</item>
+        <item>uncertainty</item>
+        <item></item>
+    </string-array>
+    <string-array name="quote_question_9">
+        <item>You believe you don\'t have to be great to start, but you have to start to be ___.</item>
+        <item>You believe you don\'t have to be great to , but you have to start to be great.</item>
+        <item>You ___ you don\'t have to be great to start, but you have to start to be great.</item>
+    </string-array>
+    <string-array name="quote_answer_9">
+        <item>great</item>
+        <item>sad</item>
+        <item>angry</item>
+        <item>lazy</item>
+        <item>bad</item>
+        <item>start</item>
+        <item>study</item>
+        <item>drive</item>
+        <item>swim</item>
+        <item>lie</item>
+        <item>believe</item>
+        <item>doubt</item>
+        <item>regret</item>
+        <item>question</item>
+        <item>suspect</item>
+    </string-array>
+    <string-array name="quote_question_10">
+        <item>A good goal is like a strenuous ___ - it makes you stretch.</item>
+        <item>A good ___ is like a strenuous exercise - it makes you stretch.</item>
+        <item>A good goal is like a strenuous exercise - it makes you ___.</item>
+    </string-array>
+    <string-array name="quote_answer_10">
+        <item>exercise</item>
+        <item>game</item>
+        <item>video</item>
+        <item>show</item>
+        <item>talk</item>
+        <item>goal</item>
+        <item>joke</item>
+        <item>friend</item>
+        <item>company</item>
+        <item>home</item>
+        <item>stretch</item>
+        <item>lose</item>
+        <item>fail</item>
+        <item>sad</item>
+        <item>bored</item>
+    </string-array>
+    <string-array name="quote_question_11">
+        <item>We make a living by what we get, but we make a ___ by what we give!</item>
+        <item>We make a ___ by what we get, but we make a life by what we give!</item>
+        <item>We make a living by what we get, but we make a life by what we ___!</item>
+    </string-array>
+    <string-array name="quote_answer_11">
+        <item>life</item>
+        <item>joke</item>
+        <item>mistake</item>
+        <item>robot</item>
+        <item>hole</item>
+        <item>living</item>
+        <item>joke</item>
+        <item>hole</item>
+        <item>screenshot</item>
+        <item>video</item>
+        <item>give</item>
+        <item>waste</item>
+        <item>talk</item>
+        <item>spend</item>
+        <item>buy</item>
+    </string-array>
+
+    <string name="quote_blank">___</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="setting_title">Settings</string>
+    <string name="setting_privacy">Privacy</string>
+    <string name="setting_facebook">Upload Facebook comments?</string>
+    <string name="setting_user_voice">Upload recordings?</string>
+    <string name="setting_recreation">Recreation Activity</string>
+    <string name="setting_contact">Friend or Family Contacts</string>
+    <string name="setting_name">Name</string>
+    <string name="setting_phone">Phone Number</string>
+    <string name="setting_social">Community Counseling</string>
+    <string name="setting_alarm">Test Reminder</string>
+    <string name="setting_system">Bluetooth Setting</string>
+    <string name="setting_bluetooth">Pairing your Bluetooth breathalyzer</string>
+
+</resources>

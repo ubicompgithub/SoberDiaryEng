@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">553234151430402</string>
+    <string name="fb_title">SHARE ON\nFACEBOOK</string>
+    <string name="fb_share">Share</string>
+    <string name="fb_message">Comments to share on Facebook:</string>
+    <string name="fb_fail_toast">Connection failed. Please check your Internet connection.</string>
+    <string name="fb_success_toast">Successfully shared!</string>
+    <string name="fb_login_message">To share the selected page, please click \'Login\'\nin the upper-right corner.</string>
+    
+    <string name="fb_login">Login</string>
+    <string name="fb_logout">Log out</string>
+    <string name="fb_check">Share on Facebook?</string>
+    <string name="fb_cancel">Abort</string>
+    <string name="fb_ok">OK</string>
+    <string name="fb_privacy">Shared Audiences</string>
+
+    <string name="fb_friend">Friends</string>
+    <string name="fb_self">Only me</string>
+    <string-array name="fb_selection">
+        <item>Friends of friends</item>
+        <item>Only me</item>
+    </string-array>
+</resources>
