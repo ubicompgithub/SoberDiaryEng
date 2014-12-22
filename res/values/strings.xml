@@ -5,7 +5,7 @@
     <string name="loading">Loading...</string>
     <string name="brac">BrAC</string>
     <string name="start">START</string>
-    <string name="recoverying">Recovering...</string>
+    <string name="recoverying">Recovering</string>
     <string name="morning">MRNG</string>
     <string name="morning_time">0&#8211;12</string>
     <string name="noon">AFTN</string>
@@ -48,16 +48,16 @@
         <item>Very happy</item>
     </string-array>
     <string-array name="craving_state">    
-        <item>Not at all\n </item>
-        <item>Very slightly\n </item>
-        <item>Slightly\n manageable</item>
-        <item>A little\n tempted</item>
-        <item>Somewhat\n restless</item>
-        <item>Moderately\n eager to buy</item>
-        <item>Quite a bit\n buy later</item>
-        <item>Very\n like to drink</item>
-        <item>Very much\n pause &amp; drink</item>
-        <item>Extremely\n drink now!</item>
+        <item>Not at all</item>
+        <item>Very\nslightly</item>
+        <item>Slightly\nmanageable</item>
+        <item>A little\ntempted</item>
+        <item>Somewhat\nrestless</item>
+        <item>Moderately\neager to buy</item>
+        <item>Quite a bit\nbuy later</item>
+        <item>Very like\nto drink</item>
+        <item>Very much\npause &amp; drink</item>
+        <item>Extremely\ndrink now!</item>
     </string-array>
 
     <string name="wait">Please wait...</string>
@@ -319,7 +319,7 @@
     </string-array>
     
     <string name="homepage">http://mll.csie.ntu.edu.tw/soberdiary/</string>
-    <string name="uploading">Uploading...</string>
+    <string name="uploading">Uploading</string>
     
 
     <string name="storytelling_test_title">Self-test and opinions towards those sentences</string>
@@ -337,7 +337,8 @@
 	<string name="storytelling_test_incorrect">Wrong answer. please try again!</string>
     
 	<string name="record_title">SELF-MANAGEMENT</string>
-	<string name="voice_main_help">Recording</string>
+	<string name="voice_main_help_ready">Record something</string>
+    <string name="voice_main_help">Recording</string>
 	<string name="em_main_help">Mood Sampling</string>
 	<string name="emotion_manage_history_title">Mood Sampling</string>
 	<string name="emotion_manage_history_help">My record:</string>
@@ -345,6 +346,7 @@
 	<string name="additional_questionnaire_help">Scroll the bars to provide your emotion and craving indices.</string>
 	<string name="additional_questionnaire_title">Providing momentary feedback</string>
     <string name="today">Today</string>
+    <string name="today_upercase">TODAY</string>
 	
 	<string name="gcm_title">Notification</string>
 	<string name="sensor_wait">The breathalyzer is recovering. Please try again!</string>

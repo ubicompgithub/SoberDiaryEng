@@ -51,6 +51,12 @@
         <item>Object</item>
         <item>Current context</item>
     </string-array>
+    <string-array name="emotion_manage_related_lowercase">
+        <item>people</item>
+        <item>event</item>
+        <item>object</item>
+        <item>current context</item>
+    </string-array>
     
     <string name="emotion_manage_help1">Your emotion at that time?</string>
     <string name="emotion_manage_help2">What triggers this feeling?</string>

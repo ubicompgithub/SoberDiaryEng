@@ -143,7 +143,7 @@ public class VoiceRecordBlock implements RecorderCallee {
 		countDownText.setText("");
 		switch (state) {
 		case STATE_INIT:
-			help.setText(R.string.voice_main_help);
+			help.setText(R.string.voice_main_help_ready);
 			topIcon.setImageDrawable(recDrawable);
 			topButton.setOnClickListener(recListener);
 			topButton.setBackgroundResource(R.drawable.record_box_top_button);

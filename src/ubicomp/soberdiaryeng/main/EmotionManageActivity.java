@@ -53,6 +53,7 @@ public class EmotionManageActivity extends Activity {
 			R.drawable.reason_type_2, R.drawable.reason_type_3 };
 
 	private static String[] relatedTexts;
+	private static String[] relatedTextsLowercase;
 
 	private DatabaseControl db;
 	private int state = 0;
@@ -78,6 +79,7 @@ public class EmotionManageActivity extends Activity {
 
 		emotionTexts = getResources().getStringArray(R.array.emotion_manage_emotion);
 		relatedTexts = getResources().getStringArray(R.array.emotion_manage_related);
+		relatedTextsLowercase = getResources().getStringArray(R.array.emotion_manage_related_lowercase);
 
 		this.activity = this;
 		db = new DatabaseControl();
@@ -94,7 +96,7 @@ public class EmotionManageActivity extends Activity {
 		View title;
 		if( curTV.toSimpleDateString().equals( getString(R.string.today) ) ){
 			title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_title0)
-				+ " " + getString(R.string.today) + "\'s " + getString(R.string.emotion_manage_title1) );
+				+ " " + getString(R.string.today_upercase) + "\'s " + getString(R.string.emotion_manage_title1) );
 		}
 		else{
 			title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_title0)
@@ -102,7 +104,7 @@ public class EmotionManageActivity extends Activity {
 		}
 
 		// View title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_title0)
-		// 		+ getString(R.string.emotion_manage_title1) + "on"	+ curTV.toSimpleDateString() );
+		// 		+ getString(R.string.emotion_manage_title1) + "on"	+ curTV.toSimpleDateString() );    // FOR TEST!!!!!!!!!!!!!!!!!!!!!
 		titleLayout.addView(title);
 
 	}
@@ -170,7 +172,7 @@ public class EmotionManageActivity extends Activity {
 
 		select_item = db.getEmotionManagementString(r_type);
 
-		String str = getResources().getString(R.string.emotion_manage_help3) + " " + relatedTexts[r_type];
+		String str = getResources().getString(R.string.emotion_manage_help3) + " " + relatedTextsLowercase[r_type];
 
 		View tv = BarButtonGenerator.createTextView(str);
 		mainLayout.addView(tv);
