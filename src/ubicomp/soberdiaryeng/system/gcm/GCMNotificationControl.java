@@ -6,10 +6,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.GCMRead;
 import ubicomp.soberdiaryeng.main.GCMAlertActivity;
 import ubicomp.soberdiaryeng.main.R;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 /**
  * Control notifications sent from GCM

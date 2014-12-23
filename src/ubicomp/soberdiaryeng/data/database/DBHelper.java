@@ -1,4 +1,4 @@
-package ubicomp.soberdiaryengeng.data.database;
+package ubicomp.soberdiaryeng.data.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

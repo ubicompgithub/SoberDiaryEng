@@ -1,10 +1,10 @@
 package ubicomp.soberdiaryeng.main;
 
 import static ubicomp.soberdiaryeng.system.config.Config.SENDER_ID;
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.GCMRead;
 import ubicomp.soberdiaryeng.system.gcm.GCMNotificationControl;
 import ubicomp.soberdiaryeng.system.gcm.GCMServerUtilities;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 import android.content.Context;
 import android.content.Intent;

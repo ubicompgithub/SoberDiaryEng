@@ -1,5 +1,6 @@
 package ubicomp.soberdiaryeng.statistic.ui.questionnaire.content;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.statistic.ui.QuestionnaireDialog;
 import ubicomp.soberdiaryeng.statistic.ui.questionnaire.listener.EmotionDIYOnClickListener;
@@ -8,7 +9,6 @@ import ubicomp.soberdiaryeng.statistic.ui.questionnaire.listener.SelectedListene
 import ubicomp.soberdiaryeng.statistic.ui.questionnaire.listener.SelfOnClickListener;
 import ubicomp.soberdiaryeng.statistic.ui.questionnaire.listener.TryAgainDoneOnClickListener;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 public class Type2Content extends QuestionnaireContent {
 

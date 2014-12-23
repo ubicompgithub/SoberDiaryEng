@@ -1,4 +1,4 @@
-package ubicomp.soberdiaryengeng.data.database;
+package ubicomp.soberdiaryeng.data.database;
 
 import java.util.Calendar;
 
@@ -39,7 +39,7 @@ public class DatabaseControl {
 	/**
 	 * SQLiteOpenHelper
 	 * 
-	 * @see ubicomp.soberdiaryengeng.data.database.DBHelper
+	 * @see ubicomp.soberdiaryeng.data.database.DBHelper
 	 */
 	private SQLiteOpenHelper dbHelper = null;
 	/** SQLLiteDatabase */

@@ -1,15 +1,17 @@
-package ubicomp.soberdiaryengeng.data.database;
+package ubicomp.soberdiaryeng.data.database;
 
+import ubicomp.soberdiaryeng.data.structure.AdditionalQuestionnaire;
 import ubicomp.soberdiaryeng.data.structure.Detection;
 import ubicomp.soberdiaryeng.data.structure.EmotionDIY;
 import ubicomp.soberdiaryeng.data.structure.EmotionManagement;
+import ubicomp.soberdiaryeng.data.structure.FacebookInfo;
 import ubicomp.soberdiaryeng.data.structure.Questionnaire;
 import ubicomp.soberdiaryeng.data.structure.StorytellingRead;
+import ubicomp.soberdiaryeng.data.structure.StorytellingTest;
 import ubicomp.soberdiaryeng.data.structure.UserVoiceRecord;
 import ubicomp.soberdiaryeng.main.App;
 
 import android.content.ContentValues;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -17,29 +19,31 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Control insertion and modification on database for the restore process
  * 
  * @author Stanley Wang
- * @see ubicomp.soberdiaryengeng.data.database.DatabaseRestoreVer1
+ * @see ubicomp.soberdiaryeng.data.database.DatabaseRestore
  */
-public class DatabaseRestoreControlVer1 {
+public class DatabaseRestoreControl {
 
 	private SQLiteOpenHelper dbHelper = null;
 	private SQLiteDatabase db = null;
 
-	/** Constructor */
-	public DatabaseRestoreControlVer1() {
+	public DatabaseRestoreControl() {
 		dbHelper = new DBHelper(App.getContext());
 	}
 
+	/**
+	 * Restore Detection
+	 * 
+	 * @param data
+	 *            Detection data
+	 */
 	public void restoreDetection(Detection data) {
 		db = dbHelper.getWritableDatabase();
-
-		String sql = "SELECT * FROM Detection WHERE year = " + data.getTv().getYear() + " AND month="
-				+ data.getTv().getMonth() + " AND day = " + data.getTv().getDay() + " AND timeslot="
-				+ data.getTv().getTimeslot();
-
-		Cursor cursor = db.rawQuery(sql, null);
-		boolean isPrime = !cursor.moveToFirst();
-		cursor.close();
-
+		if (data.isPrime()) {
+			String sql = "UPDATE Detection SET isPrime = 0" + " WHERE year =" + data.getTv().getYear() + " AND month="
+					+ data.getTv().getMonth() + " AND day =" + data.getTv().getDay() + " AND timeslot="
+					+ data.getTv().getTimeslot();
+			db.execSQL(sql);
+		}
 		ContentValues content = new ContentValues();
 		content.put("brac", data.getBrac());
 		content.put("year", data.getTv().getYear());
@@ -50,7 +54,7 @@ public class DatabaseRestoreControlVer1 {
 		content.put("timeslot", data.getTv().getTimeslot());
 		content.put("emotion", data.getEmotion());
 		content.put("craving", data.getCraving());
-		content.put("isPrime", isPrime ? 1 : 0);
+		content.put("isPrime", data.isPrime() ? 1 : 0);
 		content.put("weeklyScore", data.getWeeklyScore());
 		content.put("score", data.getScore());
 		content.put("upload", 1);
@@ -58,6 +62,12 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
+	/**
+	 * Restore Emotion DIY
+	 * 
+	 * @param data
+	 *            EmotionDIY data
+	 */
 	public void restoreEmotionDIY(EmotionDIY data) {
 		db = dbHelper.getWritableDatabase();
 		ContentValues content = new ContentValues();
@@ -75,6 +85,12 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
+	/**
+	 * Restore Questionnaire
+	 * 
+	 * @param data
+	 *            Questionnaire data
+	 */
 	public void restoreQuestionnaire(Questionnaire data) {
 		db = dbHelper.getWritableDatabase();
 		ContentValues content = new ContentValues();
@@ -92,6 +108,12 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
+	/**
+	 * Restore Emotion Management
+	 * 
+	 * @param data
+	 *            Emotion Management data
+	 */
 	public void restoreEmotionManagement(EmotionManagement data) {
 		db = dbHelper.getWritableDatabase();
 		ContentValues content = new ContentValues();
@@ -113,6 +135,12 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
+	/**
+	 * Restore User Voice Record
+	 * 
+	 * @param data
+	 *            User Voice Record data
+	 */
 	public void restoreUserVoiceRecord(UserVoiceRecord data) {
 		db = dbHelper.getWritableDatabase();
 		ContentValues content = new ContentValues();
@@ -131,6 +159,36 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
+	/**
+	 * Restore Additional Questionnaire
+	 * 
+	 * @param data
+	 *            Additional Questionaire data
+	 */
+	public void restoreAdditionalQuestionnaire(AdditionalQuestionnaire data) {
+		db = dbHelper.getWritableDatabase();
+		ContentValues content = new ContentValues();
+		content.put("year", data.getTv().getYear());
+		content.put("month", data.getTv().getMonth());
+		content.put("day", data.getTv().getDay());
+		content.put("ts", data.getTv().getTimestamp());
+		content.put("week", data.getTv().getWeek());
+		content.put("timeSlot", data.getTv().getTimeslot());
+		content.put("addedScore", 1);
+		content.put("emotion", data.getEmotion());
+		content.put("craving", data.getCraving());
+		content.put("score", data.getScore());
+		content.put("upload", 1);
+		db.insert("AdditionalQuestionnaire", null, content);
+		db.close();
+	}
+
+	/**
+	 * Restore Storytelling Read
+	 * 
+	 * @param data
+	 *            Storytelling Read data
+	 */
 	public void restoreStorytellingRead(StorytellingRead data) {
 		db = dbHelper.getWritableDatabase();
 		ContentValues content = new ContentValues();
@@ -148,7 +206,59 @@ public class DatabaseRestoreControlVer1 {
 		db.close();
 	}
 
-	// Clean All
+	/**
+	 * Restore Storytelling Test
+	 * 
+	 * @param data
+	 *            Storytelling Test data
+	 */
+	public void restoreStorytellingTest(StorytellingTest data) {
+		db = dbHelper.getWritableDatabase();
+		ContentValues content = new ContentValues();
+		content.put("year", data.getTv().getYear());
+		content.put("month", data.getTv().getMonth());
+		content.put("day", data.getTv().getDay());
+		content.put("ts", data.getTv().getTimestamp());
+		content.put("week", data.getTv().getWeek());
+		content.put("timeslot", data.getTv().getTimeslot());
+		content.put("questionPage", data.getQuestionPage());
+		content.put("isCorrect", data.isCorrect() ? 1 : 0);
+		content.put("selection", data.getSelection());
+		content.put("agreement", data.getAgreement());
+		content.put("score", data.getScore());
+		content.put("upload", 1);
+		db.insert("StorytellingTest", null, content);
+		db.close();
+	}
+
+	/**
+	 * Restore Facebook Information
+	 * 
+	 * @param data
+	 *            Facebook Infromation
+	 */
+	public void restoreFacebookInfo(FacebookInfo data) {
+		db = dbHelper.getWritableDatabase();
+		ContentValues content = new ContentValues();
+		content.put("year", data.getTv().getYear());
+		content.put("month", data.getTv().getMonth());
+		content.put("day", data.getTv().getDay());
+		content.put("ts", data.getTv().getTimestamp());
+		content.put("week", data.getTv().getWeek());
+		content.put("timeslot", data.getTv().getTimeslot());
+		content.put("pageWeek", data.getPageWeek());
+		content.put("pageLevel", data.getPageLevel());
+		content.put("text", data.getText());
+		content.put("addedScore", 1);
+		content.put("uploadSuccess", 0);
+		content.put("privacy", data.getPrivacy());
+		content.put("score", data.getScore());
+		content.put("upload", 1);
+		db.insert("FacebookInfo", null, content);
+		db.close();
+	}
+
+	/** Truncate the database */
 	public void deleteAll() {
 		db = dbHelper.getWritableDatabase();
 		String sql = null;

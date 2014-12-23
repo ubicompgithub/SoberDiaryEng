@@ -1,5 +1,6 @@
 package ubicomp.soberdiaryeng.test.ui;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.AdditionalQuestionnaire;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.R;
@@ -10,7 +11,6 @@ import ubicomp.soberdiaryeng.main.ui.toast.CustomToastSmall;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.Typeface;

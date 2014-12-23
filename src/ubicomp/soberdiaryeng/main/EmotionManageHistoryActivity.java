@@ -2,6 +2,7 @@ package ubicomp.soberdiaryeng.main;
 
 import java.util.ArrayList;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.EmotionManagement;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
 import ubicomp.soberdiaryeng.main.R;
@@ -9,7 +10,6 @@ import ubicomp.soberdiaryeng.main.ui.BarButtonGenerator;
 import ubicomp.soberdiaryeng.main.ui.ScreenSize;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;

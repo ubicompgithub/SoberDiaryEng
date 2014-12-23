@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.file.MainStorage;
 import ubicomp.soberdiaryeng.data.structure.Detection;
 import ubicomp.soberdiaryeng.main.App;
@@ -14,7 +15,6 @@ import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.toast.CustomToast;
 import ubicomp.soberdiaryeng.storytelling.ui.StorytellingGraphics;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.content.Context;
 import android.util.Log;
 

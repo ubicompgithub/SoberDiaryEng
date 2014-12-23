@@ -1,9 +1,9 @@
 package ubicomp.soberdiaryeng.statistic.ui.block;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
 import android.os.Handler;

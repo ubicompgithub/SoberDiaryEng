@@ -46,6 +46,7 @@
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="9dp" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -69,6 +70,65 @@
                 android:id="@+id/story_page_arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/story_page_more"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="12dp"
+                android:clickable="true"
+                android:visibility="invisible"
+                android:src="@drawable/quote_more" />
+
+            <ImageView
+                android:id="@+id/story_page_more_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/quote_background2"
+                android:visibility="invisible" />
+
+            <ImageView
+	            android:id="@+id/story_page_more_exit"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_alignParentTop="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="20dp"
+	            android:layout_marginTop="40dp"
+	            android:clickable="true"
+	            android:src="@drawable/quote_cross"
+	            android:visibility="invisible" />
+
+            <RelativeLayout
+                android:id="@+id/story_more_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/story_page_more_quote"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Alcohol is the worst enemy. Don\&apos;t let it master you. Never give up!"
+                    android:textColor="@color/white"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/story_page_more_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Proc"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
         </RelativeLayout>
 
         <ImageView
@@ -150,13 +210,15 @@
 
                 <TextView
                     android:id="@+id/story_quote"
-                    android:layout_width="wrap_content"
-                    android:layout_height="42dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:textAlignment="textStart"
                     android:textColor="@color/page_gray"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
 
                 <RelativeLayout
                     android:id="@+id/story_quote_hidden_layout"
@@ -187,8 +249,12 @@
                         android:layout_toRightOf="@+id/story_quote_hidden_text"
                         android:src="@drawable/storytelling_quote_button" />
                 </RelativeLayout>
+
             </LinearLayout>
         </ScrollView>
+
+
+
     </RelativeLayout>
 
 </RelativeLayout>

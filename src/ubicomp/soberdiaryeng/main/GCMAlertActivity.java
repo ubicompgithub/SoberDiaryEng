@@ -1,10 +1,10 @@
 package ubicomp.soberdiaryeng.main;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.GCMRead;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.ScaleOnTouchListener;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;

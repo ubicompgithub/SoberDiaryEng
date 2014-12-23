@@ -1,5 +1,6 @@
 package ubicomp.soberdiaryeng.storytelling.ui;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.EmotionManagement;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
 import ubicomp.soberdiaryeng.main.EmotionManageActivity;
@@ -8,7 +9,6 @@ import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;

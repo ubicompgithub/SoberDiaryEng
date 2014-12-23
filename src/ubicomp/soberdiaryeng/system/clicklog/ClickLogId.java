@@ -99,6 +99,9 @@ public class ClickLogId {
 	public final static long STORYTELLING_READ						= 31600000;
 	public final static long STORYTELLING_READ_OK				= 31400000;
 	public final static long STORYTELLING_READ_CANCEL	= 31500000;
+
+	public final static long STORYTELLING_MORE			= 31700000;
+	public final static long STORYTELLING_MORE_EXIT			= 31800000;
 	
 	public final static long EMOTION_DIY_ENTER					= 40000000;
 	public final static long EMOTION_DIY_LEAVE					= 40010000;

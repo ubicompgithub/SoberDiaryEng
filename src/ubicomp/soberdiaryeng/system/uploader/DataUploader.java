@@ -20,6 +20,7 @@ import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.file.MainStorage;
 import ubicomp.soberdiaryeng.data.structure.AdditionalQuestionnaire;
 import ubicomp.soberdiaryeng.data.structure.BreathDetail;
@@ -37,7 +38,6 @@ import ubicomp.soberdiaryeng.data.structure.UserVoiceRecord;
 import ubicomp.soberdiaryeng.system.check.DefaultCheck;
 import ubicomp.soberdiaryeng.system.check.NetworkCheck;
 import ubicomp.soberdiaryeng.system.cleaner.Cleaner;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.util.Log;

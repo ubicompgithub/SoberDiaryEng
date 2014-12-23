@@ -2,10 +2,10 @@ package ubicomp.soberdiaryeng.main;
 
 import java.util.Calendar;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.system.check.DefaultCheck;
 import ubicomp.soberdiaryeng.system.check.LockCheck;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 import android.app.Notification;
 import android.app.NotificationManager;

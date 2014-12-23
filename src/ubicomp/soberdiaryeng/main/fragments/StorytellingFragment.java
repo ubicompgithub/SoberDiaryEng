@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.BarInfo;
 import ubicomp.soberdiaryeng.data.structure.Detection;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
@@ -36,7 +37,6 @@ import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.Config;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.content.Intent;
@@ -132,11 +132,15 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	private ImageView storytellingButton, fbButton;
 	private StorytellingTestOnClickListener storytellingOnClickListener = new StorytellingTestOnClickListener();
 	private FacebookOnClickListener facebookOnClickListener = new FacebookOnClickListener();
+	private MoreOnClickListener moreOnClickListener = new MoreOnClickListener();
+	private MoreExitOnClickListener moreExitOnClickListener = new MoreExitOnClickListener();
 	private final RecordBoxOnKeyListener recordBoxOnKeyListener = new RecordBoxOnKeyListener();
 	private QuoteScrollListener quoteScrollListener = new QuoteScrollListener();
 	private Animation animation, arrowAnimation;
 	private int text_color = App.getContext().getResources()
 			.getColor(R.color.black_gray);
+	private int white_color = App.getContext().getResources()
+			.getColor(R.color.white);
 	private int value_color = App.getContext().getResources()
 			.getColor(R.color.lite_orange);
 	private static final long READING_PAGE_TIME = Config.READING_PAGE_TIME;
@@ -157,6 +161,12 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	// private static final String TAG = "STORYTELLING";
 	
 	private int notify_action = 0;
+
+	private ImageView moreButton, moreBackground, moreExitButton;
+	private TextView moreQuote; // moreProcess
+	private Boolean isMoreDialogOpened = false;
+
+	private int smallTextSize = App.getContext().getResources().getDimensionPixelSize(R.dimen.sn_text_size);
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -232,6 +242,12 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		fbButton = (ImageView) view.findViewById(R.id.story_fb_button);
 		stageRateText = (TextView) view.findViewById(R.id.story_stage_rate);
 		quoteText = (TextView) view.findViewById(R.id.story_quote);
+		moreButton = (ImageView) view
+				.findViewById(R.id.story_page_more);
+		moreBackground = (ImageView) view
+				.findViewById(R.id.story_page_more_background);
+		moreExitButton = (ImageView) view
+				.findViewById(R.id.story_page_more_exit);
 		stageLayout = (RelativeLayout) view
 				.findViewById(R.id.story_stage_message_layout);
 		stageMessage = (TextView) view.findViewById(R.id.story_stage);
@@ -247,14 +263,23 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		chartTitle = (ChartTitleView) view.findViewById(R.id.chartTitleView);
 		chartLabel = (ChartLabelView) view.findViewById(R.id.chartLabelView);
 
+		moreQuote = (TextView) view.findViewById(R.id.story_page_more_quote);
+		// moreProcess = (TextView) view.findViewById(R.id.story_page_more_process);
+
 		stageMessage.setTypeface(wordTypefaceBold);
 		stageMessageText.setTypeface(digitTypefaceBold);
 		quoteText.setTypeface(wordTypefaceBold);
 		quoteHiddenText.setTypeface(wordTypefaceBold);
+		moreQuote.setTypeface(wordTypefaceBold);
+		// moreProcess.setTypeface(wordTypefaceBold);
+
+		moreQuote.setTextSize(smallTextSize);
 
 		storytellingButton.setOnClickListener(storytellingOnClickListener);
 		fbButton.setOnClickListener(facebookOnClickListener);
 		quoteScrollView.setOnTouchListener(quoteScrollListener);
+		moreButton.setOnClickListener(moreOnClickListener);
+		moreExitButton.setOnClickListener(moreExitOnClickListener);
 
 		scrollView.setSmoothScrollingEnabled(true);
 
@@ -421,6 +446,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
 		stageRateText.setText(p_str);
 		quoteText.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
+
 	}
 
 	private void endAnimation() {
@@ -661,12 +687,25 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			stageRateText.setVisibility(View.VISIBLE);
 			quoteScrollView.setVisibility(View.VISIBLE);
 			fbButton.setVisibility(View.VISIBLE);
+
+			// Let MORE button be visible
+			if(page_week != 2 && page_week != 10) {
+				moreButton.setVisibility(View.VISIBLE);
+				moreButton.bringToFront();
+			}
+			else{
+				moreButton.setVisibility(View.INVISIBLE);
+				moreButton.bringToFront();
+			}
+
 		} else {
 			stageLayout.setVisibility(View.INVISIBLE);
 			storytellingButton.setVisibility(View.INVISIBLE);
 			stageRateText.setVisibility(View.INVISIBLE);
 			quoteScrollView.setVisibility(View.INVISIBLE);
 			fbButton.setVisibility(View.INVISIBLE);
+
+			moreButton.setVisibility(View.INVISIBLE);
 		}
 	}
 
@@ -705,6 +744,9 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		@Override
 		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 				float velocityY) {
+			if(isMoreDialogOpened)
+				return true;
+
 			final int FLING_THRESHOLD = 5;
 			if (Math.abs(velocityX) > 1.2 * Math.abs(velocityY))
 				return true;
@@ -1183,6 +1225,71 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			TimeValue tv = bars.get(size - 1).getTv();
 			openRecordBox(tv, size - 1);
 		}
+	}
+
+	private class MoreOnClickListener implements View.OnClickListener {
+		@Override
+		public void onClick(View v) {
+			ClickLog.Log(ClickLogId.STORYTELLING_MORE);
+			moreButton.setVisibility(View.INVISIBLE);
+			fbButton.setVisibility(View.INVISIBLE);
+			storytellingButton.setVisibility(View.INVISIBLE);
+			quoteText.setVisibility(View.INVISIBLE);
+			stageRateText.setVisibility(View.INVISIBLE);
+
+			
+			moreQuote.setVisibility(View.VISIBLE);
+			moreQuote.bringToFront();
+			// moreProcess.setVisibility(View.VISIBLE);
+			// moreProcess.bringToFront();
+			moreExitButton.setVisibility(View.VISIBLE);
+			moreExitButton.bringToFront();
+			
+			setMoreTexts();
+
+			moreBackground.setVisibility(View.VISIBLE);
+			
+			isMoreDialogOpened = true;
+			
+		}
+	}
+
+	private class MoreExitOnClickListener implements View.OnClickListener {
+		@Override
+		public void onClick(View v) {
+			ClickLog.Log(ClickLogId.STORYTELLING_MORE_EXIT);
+			moreButton.setVisibility(View.VISIBLE);
+			fbButton.setVisibility(View.VISIBLE);
+			storytellingButton.setVisibility(View.VISIBLE);
+			quoteText.setVisibility(View.VISIBLE);
+			stageRateText.setVisibility(View.VISIBLE);
+
+			moreBackground.setVisibility(View.INVISIBLE);
+			moreQuote.setVisibility(View.INVISIBLE);
+			// moreProcess.setVisibility(View.INVISIBLE);
+			moreExitButton.setVisibility(View.INVISIBLE);
+			
+			isMoreDialogOpened = false;
+		}
+	}
+
+	private void setMoreTexts() {
+
+		Integer score = page_states[page_week];
+		float progress = Detection.weeklyScoreToProgress(score.intValue());
+		String stageText = String.valueOf(page_week + 1);
+		String progress_str = format.format(progress) + "%\n";
+		Spannable p_str = new SpannableString(progress_str + doneStr);
+		p_str.setSpan(new CustomTypefaceSpan("c1", digitTypefaceBold,
+				value_color), 0, progress_str.length(),
+				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		p_str.setSpan(
+				new CustomTypefaceSpan("c2", wordTypefaceBold, white_color),
+				progress_str.length(),
+				progress_str.length() + doneStr.length(),
+				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// moreProcess.setText(p_str);
+		moreQuote.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
 	}
 
 }

@@ -13,11 +13,11 @@ import android.widget.TableRow;
 import android.widget.ImageView.ScaleType;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.Detection;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 public class StatisticMonthViewSDK10 extends StatisticPageView {
 

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.Rank;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
@@ -20,7 +21,6 @@ import ubicomp.soberdiaryeng.statistic.data.UserLevelCollector;
 import ubicomp.soberdiaryeng.statistic.ui.ShowRadarChart;
 import ubicomp.soberdiaryeng.system.check.StartDateCheck;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 public class AnalysisRankView extends StatisticPageView {
 

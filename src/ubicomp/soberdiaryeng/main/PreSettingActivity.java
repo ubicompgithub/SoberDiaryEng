@@ -1,10 +1,10 @@
 package ubicomp.soberdiaryeng.main;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseDummyData;
+import ubicomp.soberdiaryeng.data.database.DatabaseRestore;
+import ubicomp.soberdiaryeng.data.database.DatabaseRestoreVer1;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseDummyData;
-import ubicomp.soberdiaryengeng.data.database.DatabaseRestore;
-import ubicomp.soberdiaryengeng.data.database.DatabaseRestoreVer1;
 
 import android.os.Bundle;
 import android.app.Activity;

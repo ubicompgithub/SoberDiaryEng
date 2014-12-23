@@ -2,6 +2,7 @@ package ubicomp.soberdiaryeng.storytelling.ui;
 
 import java.util.Random;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.StorytellingRead;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.R;
@@ -12,7 +13,6 @@ import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
 import ubicomp.soberdiaryeng.system.uploader.DataUploader;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Typeface;

@@ -3,13 +3,13 @@ package ubicomp.soberdiaryeng.statistic.ui.block;
 import java.text.DecimalFormat;
 import java.util.Calendar;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.Detection;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.R;
 import ubicomp.soberdiaryeng.main.ui.CustomTypefaceSpan;
 import ubicomp.soberdiaryeng.main.ui.Typefaces;
 import ubicomp.soberdiaryeng.system.check.TimeBlock;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;

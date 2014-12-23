@@ -94,7 +94,7 @@ public class ChartView extends View {
 		super(context, attrs);
 		
 		if (chartCircleBmp == null || chartCircleBmp.isRecycled())
-			chartCircleBmp = BitmapFactory.decodeResource(getResources(), R.drawable.chart_button);
+			chartCircleBmp = BitmapFactory.decodeResource(getResources(), R.drawable.chart_button2);
 		if (chartDataBmp == null || chartDataBmp.isRecycled())
 			chartDataBmp = BitmapFactory.decodeResource(getResources(), R.drawable.chart_show);
 		if (chartAddBmp == null || chartAddBmp.isRecycled())

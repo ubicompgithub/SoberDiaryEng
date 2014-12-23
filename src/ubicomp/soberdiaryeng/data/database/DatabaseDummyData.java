@@ -1,4 +1,4 @@
-package ubicomp.soberdiaryengeng.data.database;
+package ubicomp.soberdiaryeng.data.database;
 
 import java.util.Calendar;
 import java.util.Random;

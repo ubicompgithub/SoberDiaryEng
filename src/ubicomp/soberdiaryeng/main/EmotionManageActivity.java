@@ -1,5 +1,6 @@
 package ubicomp.soberdiaryeng.main;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.EmotionManagement;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
 import ubicomp.soberdiaryeng.main.R;
@@ -11,7 +12,6 @@ import ubicomp.soberdiaryeng.main.ui.toast.CustomToastSmall;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Typeface;

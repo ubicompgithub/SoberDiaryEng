@@ -2,9 +2,9 @@ package ubicomp.soberdiaryeng.system.cleaner;
 
 import java.io.File;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.file.MainStorage;
 import ubicomp.soberdiaryeng.data.structure.Detection;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 import android.app.AlarmManager;
 

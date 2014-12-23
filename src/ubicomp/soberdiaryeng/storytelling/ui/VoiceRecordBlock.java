@@ -3,6 +3,7 @@ package ubicomp.soberdiaryeng.storytelling.ui;
 import java.io.File;
 import java.text.DecimalFormat;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.file.MainStorage;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
 import ubicomp.soberdiaryeng.data.structure.UserVoiceRecord;
@@ -14,7 +15,6 @@ import ubicomp.soberdiaryeng.main.ui.toast.CustomToastSmall;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;

@@ -1,5 +1,6 @@
 package ubicomp.soberdiaryeng.main;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.EmotionDIY;
 import ubicomp.soberdiaryeng.data.structure.Questionnaire;
 import ubicomp.soberdiaryeng.main.R;
@@ -12,7 +13,6 @@ import ubicomp.soberdiaryeng.statistic.ui.questionnaire.content.ConnectSocialInf
 import ubicomp.soberdiaryeng.system.clicklog.ClickLog;
 import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;

@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.UUID;
 
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.BreathDetail;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.R;
@@ -15,7 +16,6 @@ import ubicomp.soberdiaryeng.system.config.PreferenceControl;
 import ubicomp.soberdiaryeng.test.camera.CameraRunHandler;
 import ubicomp.soberdiaryeng.test.data.BracValueFileHandler;
 import ubicomp.soberdiaryeng.test.data.BreathDetailHandler;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;

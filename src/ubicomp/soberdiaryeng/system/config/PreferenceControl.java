@@ -5,12 +5,12 @@ import java.util.Calendar;
 import android.app.AlarmManager;
 import android.content.SharedPreferences;
 import android.graphics.Point;
+import ubicomp.soberdiaryeng.data.database.DatabaseControl;
 import ubicomp.soberdiaryeng.data.structure.ExchangeHistory;
 import ubicomp.soberdiaryeng.data.structure.TimeValue;
 import ubicomp.soberdiaryeng.main.App;
 import ubicomp.soberdiaryeng.main.MainActivity;
 import ubicomp.soberdiaryeng.main.R;
-import ubicomp.soberdiaryengeng.data.database.DatabaseControl;
 
 /**
  * Class for controlling Android Preference
