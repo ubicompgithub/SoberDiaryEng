@@ -21,7 +21,7 @@ public class InspireContent extends QuestionnaireContent {
 		msgBox.showCloseButton(false);
 		Random rand = new Random();
 		int idx = rand.nextInt(help.length);  // FOR TEST!!!!!!!!!!!!!!!!!!!!
-		// int idx = 12;  // FOR TEST!!!!!!!!!!!!!!!!!!!!
+		idx = 40;  // FOR TEST!!!!!!!!!!!!!!!!!!!!
 		
 		setHelp(help[idx]);
 		msgBox.showQuestionnaireLayout(false);

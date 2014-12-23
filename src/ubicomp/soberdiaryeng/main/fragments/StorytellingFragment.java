@@ -1005,6 +1005,9 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 							page_week);
 					quoteHiddenLayout.setVisibility(View.VISIBLE);
 					quoteHiddenLayout.setOnClickListener(listener);
+
+					// moreButton.setVisibility(View.INVISIBLE);  // FOR TEST!!!!!!!!!!!!!!!!!!!
+
 				} else {
 					quoteHiddenLayout.setVisibility(View.GONE);
 					quoteHiddenLayout.setAnimation(null);
@@ -1092,6 +1095,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		if (scrollHandler != null) {
 			scrollHandler.removeMessages(0);
 			scrollHandler.removeMessages(1);
+			moreButton.setVisibility(View.VISIBLE);  // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!
 		}
 		quoteScrollView.scrollTo(0, 0);
 		quoteHiddenLayout.setOnClickListener(null);

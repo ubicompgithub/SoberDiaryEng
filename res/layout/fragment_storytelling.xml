@@ -225,6 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_weight="1"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/hidden_quote_button"
                     android:visibility="gone" >
 
