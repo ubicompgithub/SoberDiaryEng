@@ -20,8 +20,7 @@ public class InspireContent extends QuestionnaireContent {
 	protected void setContent() {
 		msgBox.showCloseButton(false);
 		Random rand = new Random();
-		int idx = rand.nextInt(help.length);  // FOR TEST!!!!!!!!!!!!!!!!!!!!
-		idx = 40;  // FOR TEST!!!!!!!!!!!!!!!!!!!!
+		int idx = rand.nextInt(help.length);
 		
 		setHelp(help[idx]);
 		msgBox.showQuestionnaireLayout(false);

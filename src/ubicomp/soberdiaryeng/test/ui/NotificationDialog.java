@@ -44,11 +44,11 @@ public class NotificationDialog {
 
 	private String[] subtitles = App.getContext().getResources().getStringArray(R.array.notification_subtitles);
 	private String[] comments = App.getContext().getResources().getStringArray(R.array.notification_comments);
-	private int[] IMAGE_ID = { R.drawable.notification_brac_test, R.drawable.notification_additional_questionnaire,
-			R.drawable.notification_emotion_diy, R.drawable.notification_voice_record,
-			R.drawable.notification_emotion_management, R.drawable.notification_storytelling,
-			R.drawable.notification_fb, R.drawable.notification_questionnaire,
-			R.drawable.notification_storytelling_test };
+	private int[] IMAGE_ID = { R.drawable.notification_brac_test, R.drawable.notification_additional_questionnaire2,
+			R.drawable.notification_emotion_diy2, R.drawable.notification_voice_record2,
+			R.drawable.notification_emotion_management2, R.drawable.notification_storytelling,
+			R.drawable.notification_fb2, R.drawable.notification_questionnaire2,
+			R.drawable.notification_storytelling_test2 };
 
 	private DatabaseControl db = new DatabaseControl();
 

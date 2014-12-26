@@ -35,27 +35,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/notification_storytelling" />
 
             <TextView
                 android:id="@+id/notification_subtitle"
-                android:layout_width="wrap_content"
+                android:layout_width="195dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/notification_image"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
                 android:layout_below="@+id/notification_image"
-                android:layout_marginTop="18dp"
                 android:text="@string/notification_title"
                 android:textColor="@color/orange"
                 android:textSize="@dimen/large_text_size" />
 
             <TextView
                 android:id="@+id/notification_comment"
-                android:layout_width="162dp"
+                android:layout_width="195dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/notification_image"
                 android:layout_below="@+id/notification_subtitle"
                 android:layout_marginTop="12dp"
+                android:layout_alignLeft="@+id/notification_subtitle"
                 android:text="@string/notification_title"
                 android:textColor="@color/white"
                 android:textSize="@dimen/large_text_size" />
