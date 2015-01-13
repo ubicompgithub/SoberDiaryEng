@@ -88,9 +88,10 @@ public class AboutActivity extends Activity {
 		titleText.setTypeface(wordTypefaceBold);
 		about.setTypeface(wordTypefaceBold);
 		aboutText.setTypeface(wordTypefaceBold);
-		phone.setTypeface(wordTypeface);
-		phone_number.setTypeface(digitTypefaceBold);
-		email.setTypeface(digitTypefaceBold);
+		phone.setTypeface(wordTypefaceBold);
+		phone_number.setTypeface(digitTypeface);
+		email.setTypeface(digitTypeface);
+		website.setTypeface(wordTypeface);
 		copyrightText.setTypeface(digitTypeface);
 		copyrightText.setText(COPYRIGHT);
 
@@ -166,49 +167,55 @@ public class AboutActivity extends Activity {
 		} catch (NameNotFoundException e) {
 		}
 
-		Spannable helpSpannable = new SpannableString(message[0] + "\n" + ntu + comma + intel_ntu + comma
-				+ taipei_city_hospital + message[1] + "\n\n" + message[2] + "\n" + message[3] + "\n" + curVersion
-				+ versionName + "\n\n" + message[4] + happ_design + "\n" + message[5] + rickie_wu + "\n" + message[6]
+		Spannable helpSpannable = new SpannableString(message[0] + " " + ntu + comma + intel_ntu + comma
+				+ taipei_city_hospital + message[1] + "\n\n" + message[2] + "\n" + message[3] + "\n\n" + curVersion
+				+ versionName + "\n" + message[4] + happ_design + "\n" + message[5] + rickie_wu + "\n" + message[6]
 				+ yuga_huang + "\n");
 		int start = 0;
-		int end = message[0].length() + 1;
+		int end = message[0].length() + 1 + ntu.length() + comma.length() + intel_ntu.length()
+		          + comma.length() + taipei_city_hospital.length() + message[1].length() + 2 
+		          + message[2].length() + 1 + message[3].length() + 2;
 		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Crrent version"
 		start = end;
-		end = start + ntu.length() + comma.length() + intel_ntu.length() + comma.length() + taipei_city_hospital.length();
+		end = start + curVersion.length();
 		helpSpannable.setSpan(new CustomTypefaceSpan("custom2", wordTypefaceBold, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of version number
 		start = end;
-		end = start + message[1].length() + 2 + message[2].length() + 1 + message[3].length() + 1 + curVersion.length();
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
+		end = start + versionName.length() + 1;
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom3", digitTypeface, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-		start = end;
-		end = start + versionName.length() + 2;
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom3", digitTypefaceBold, 0xFF727171), start, end,
-				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Interface design"
 		start = end;
 		end = start + message[4].length();
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom2", wordTypefaceBold, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "happdesign.com"
 		start = end;
 		end = start + happ_design.length() + 1;
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom3", digitTypefaceBold, 0xFF727171), start, end,
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Illustration"
 		start = end;
 		end = start + message[5].length();
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom2", wordTypefaceBold, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Rickie Wu"
 		start = end;
 		end = start + rickie_wu.length() + 1;
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom3", digitTypefaceBold, 0xFF727171), start, end,
-				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-		start = end;
-		end = start + message[6].length();
 		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Page coloring"
+		start = end;
+		end = start + message[6].length();
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom2", wordTypefaceBold, 0xFF727171), start, end,
+				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+		// Set the typeface of "Yuga Huang"
 		start = end;
 		end = start + yuga_huang.length() + 1;
-		helpSpannable.setSpan(new CustomTypefaceSpan("custom3", digitTypefaceBold, 0xFF727171), start, end,
+		helpSpannable.setSpan(new CustomTypefaceSpan("custom1", wordTypeface, 0xFF727171), start, end,
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
 
 		aboutText.setText(helpSpannable);
