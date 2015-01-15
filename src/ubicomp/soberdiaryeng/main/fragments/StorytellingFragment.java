@@ -163,7 +163,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	private int notify_action = 0;
 
 	private ImageView moreButton, moreBackground, moreExitButton;
-	private TextView moreQuote; // moreProcess
+	private TextView moreQuote, moreProcess;
 	private Boolean isMoreDialogOpened = false;
 
 	private int smallTextSize = App.getContext().getResources().getDimensionPixelSize(R.dimen.sn_text_size);
@@ -264,22 +264,21 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		chartLabel = (ChartLabelView) view.findViewById(R.id.chartLabelView);
 
 		moreQuote = (TextView) view.findViewById(R.id.story_page_more_quote);
-		// moreProcess = (TextView) view.findViewById(R.id.story_page_more_process);
+		moreProcess = (TextView) view.findViewById(R.id.story_page_more_process);
 
 		stageMessage.setTypeface(wordTypefaceBold);
 		stageMessageText.setTypeface(digitTypefaceBold);
 		quoteText.setTypeface(wordTypefaceBold);
 		quoteHiddenText.setTypeface(wordTypefaceBold);
 		moreQuote.setTypeface(wordTypefaceBold);
-		// moreProcess.setTypeface(wordTypefaceBold);
-
-		moreQuote.setTextSize(smallTextSize);
+		moreProcess.setTypeface(wordTypefaceBold);
 
 		storytellingButton.setOnClickListener(storytellingOnClickListener);
 		fbButton.setOnClickListener(facebookOnClickListener);
 		quoteScrollView.setOnTouchListener(quoteScrollListener);
 		moreButton.setOnClickListener(moreOnClickListener);
 		moreExitButton.setOnClickListener(moreExitOnClickListener);
+		moreBackground.setOnClickListener(moreExitOnClickListener);
 
 		scrollView.setSmoothScrollingEnabled(true);
 
@@ -1236,16 +1235,16 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE);
 			moreButton.setVisibility(View.INVISIBLE);
-			fbButton.setVisibility(View.INVISIBLE);
-			storytellingButton.setVisibility(View.INVISIBLE);
+			// fbButton.setVisibility(View.INVISIBLE);
+			// storytellingButton.setVisibility(View.INVISIBLE);
 			quoteText.setVisibility(View.INVISIBLE);
-			stageRateText.setVisibility(View.INVISIBLE);
+			stageRateText.bringToFront();
 
 			
 			moreQuote.setVisibility(View.VISIBLE);
 			moreQuote.bringToFront();
-			// moreProcess.setVisibility(View.VISIBLE);
-			// moreProcess.bringToFront();
+			moreProcess.setVisibility(View.VISIBLE);
+			moreProcess.bringToFront();
 			moreExitButton.setVisibility(View.VISIBLE);
 			moreExitButton.bringToFront();
 			
@@ -1263,14 +1262,14 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE_EXIT);
 			moreButton.setVisibility(View.VISIBLE);
-			fbButton.setVisibility(View.VISIBLE);
-			storytellingButton.setVisibility(View.VISIBLE);
+			// fbButton.setVisibility(View.VISIBLE);
+			// storytellingButton.setVisibility(View.VISIBLE);
 			quoteText.setVisibility(View.VISIBLE);
-			stageRateText.setVisibility(View.VISIBLE);
+			// stageRateText.setVisibility(View.VISIBLE);
 
 			moreBackground.setVisibility(View.INVISIBLE);
 			moreQuote.setVisibility(View.INVISIBLE);
-			// moreProcess.setVisibility(View.INVISIBLE);
+			moreProcess.setVisibility(View.INVISIBLE);
 			moreExitButton.setVisibility(View.INVISIBLE);
 			
 			isMoreDialogOpened = false;
@@ -1288,11 +1287,11 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 				value_color), 0, progress_str.length(),
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
 		p_str.setSpan(
-				new CustomTypefaceSpan("c2", wordTypefaceBold, white_color),
+				new CustomTypefaceSpan("c2", wordTypefaceBold, text_color),
 				progress_str.length(),
 				progress_str.length() + doneStr.length(),
 				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-		// moreProcess.setText(p_str);
+		moreProcess.setText(p_str);
 		moreQuote.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
 	}
 
