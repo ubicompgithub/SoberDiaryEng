@@ -298,7 +298,8 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 
 		RecordCheckTask task = new RecordCheckTask();
 		task.execute();
-		isMoreOpened = false;
+		
+		exitMore();
 	}
 
 	public class BarInitTask extends AsyncTask<Void, Void, Void> {
@@ -1098,12 +1099,10 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		if (scrollHandler != null) {
 			scrollHandler.removeMessages(0);
 			scrollHandler.removeMessages(1);
-			moreButton.setVisibility(View.VISIBLE);  // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!
+			moreButton.setVisibility(View.VISIBLE);
 		}
 		quoteScrollView.scrollTo(0, 0);
 		quoteHiddenLayout.setOnClickListener(null);
-
-		// moreButton.bringToFront(); // FOR TEST!!!!!!!!!!!!!!
 	}
 
 	private View recordBoxView;
@@ -1236,24 +1235,38 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		}
 	}
 
+	private void showMore(){
+		moreButton.setVisibility(View.INVISIBLE);
+		quoteText.setVisibility(View.INVISIBLE);
+		stageRateText.setVisibility(View.INVISIBLE);
+		
+		moreQuote.setVisibility(View.VISIBLE);
+		moreQuote.bringToFront();
+		moreProcess.setVisibility(View.VISIBLE);
+		moreProcess.bringToFront();
+		
+		setMoreTexts();
+
+		moreBackground.setVisibility(View.VISIBLE);
+		isMoreOpened = true;
+	}
+
+	private void exitMore(){
+		moreButton.setVisibility(View.VISIBLE);
+		quoteText.setVisibility(View.VISIBLE);
+		stageRateText.setVisibility(View.VISIBLE);
+
+		moreBackground.setVisibility(View.INVISIBLE);
+		moreQuote.setVisibility(View.INVISIBLE);
+		moreProcess.setVisibility(View.INVISIBLE);
+		isMoreOpened = false;
+	}
+
 	private class MoreOnClickListener implements View.OnClickListener {
 		@Override
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE);
-			moreButton.setVisibility(View.INVISIBLE);
-			quoteText.setVisibility(View.INVISIBLE);
-			stageRateText.setVisibility(View.INVISIBLE);
-			// stageRateText.bringToFront();
-			
-			moreQuote.setVisibility(View.VISIBLE);
-			moreQuote.bringToFront();
-			moreProcess.setVisibility(View.VISIBLE);
-			moreProcess.bringToFront();
-			
-			setMoreTexts();
-
-			moreBackground.setVisibility(View.VISIBLE);
-			isMoreOpened = true;
+			showMore();
 		}
 	}
 
@@ -1261,14 +1274,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		@Override
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE_EXIT);
-			moreButton.setVisibility(View.VISIBLE);
-			quoteText.setVisibility(View.VISIBLE);
-			stageRateText.setVisibility(View.VISIBLE);
-
-			moreBackground.setVisibility(View.INVISIBLE);
-			moreQuote.setVisibility(View.INVISIBLE);
-			moreProcess.setVisibility(View.INVISIBLE);
-			isMoreOpened = false;
+			exitMore();
 		}
 	}
 

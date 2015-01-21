@@ -323,7 +323,7 @@
     
 
     <string name="storytelling_test_title">Self-test and opinions towards those sentences</string>
-    <string name="storytelling_test_question">Fill up the missing word in the following sentence?</string>
+    <string name="storytelling_test_question">Fill up the missing word below</string>
     <string name= "storytelling_test_agreement">How much you agree with this sentence?</string>
     <string-array name="agreement">
         <item>Strongly disagree</item>
