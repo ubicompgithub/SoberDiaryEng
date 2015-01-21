@@ -55,6 +55,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -164,6 +165,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 
 	private ImageView moreButton, moreBackground;
 	private TextView moreQuote, moreProcess;
+	private boolean isMoreOpened = false;
 
 	private int smallTextSize = App.getContext().getResources().getDimensionPixelSize(R.dimen.sn_text_size);
 
@@ -296,6 +298,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 
 		RecordCheckTask task = new RecordCheckTask();
 		task.execute();
+		isMoreOpened = false;
 	}
 
 	public class BarInitTask extends AsyncTask<Void, Void, Void> {
@@ -693,7 +696,10 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			}
 			else{
 				moreButton.setVisibility(View.INVISIBLE);
-				// moreButton.bringToFront(); =========================
+			}
+			if(isMoreOpened){
+				moreQuote.setVisibility(View.VISIBLE);
+				moreProcess.setVisibility(View.VISIBLE);
 			}
 
 		} else {
@@ -704,6 +710,10 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			fbButton.setVisibility(View.INVISIBLE);
 
 			moreButton.setVisibility(View.INVISIBLE);
+			if(isMoreOpened){
+				moreQuote.setVisibility(View.INVISIBLE);
+				moreProcess.setVisibility(View.INVISIBLE);
+			}
 		}
 	}
 
@@ -742,7 +752,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		@Override
 		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 				float velocityY) {
-
 			final int FLING_THRESHOLD = 5;
 			if (Math.abs(velocityX) > 1.2 * Math.abs(velocityY))
 				return true;
@@ -1232,11 +1241,9 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE);
 			moreButton.setVisibility(View.INVISIBLE);
-			// fbButton.setVisibility(View.INVISIBLE);
-			// storytellingButton.setVisibility(View.INVISIBLE);
 			quoteText.setVisibility(View.INVISIBLE);
+			stageRateText.setVisibility(View.INVISIBLE);
 			// stageRateText.bringToFront();
-
 			
 			moreQuote.setVisibility(View.VISIBLE);
 			moreQuote.bringToFront();
@@ -1246,8 +1253,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			setMoreTexts();
 
 			moreBackground.setVisibility(View.VISIBLE);
-			
-			
+			isMoreOpened = true;
 		}
 	}
 
@@ -1256,20 +1262,17 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		public void onClick(View v) {
 			ClickLog.Log(ClickLogId.STORYTELLING_MORE_EXIT);
 			moreButton.setVisibility(View.VISIBLE);
-			// fbButton.setVisibility(View.VISIBLE);
-			// storytellingButton.setVisibility(View.VISIBLE);
 			quoteText.setVisibility(View.VISIBLE);
-			// stageRateText.setVisibility(View.VISIBLE);
+			stageRateText.setVisibility(View.VISIBLE);
 
 			moreBackground.setVisibility(View.INVISIBLE);
 			moreQuote.setVisibility(View.INVISIBLE);
 			moreProcess.setVisibility(View.INVISIBLE);
-			
+			isMoreOpened = false;
 		}
 	}
 
 	private void setMoreTexts() {
-
 		Integer score = page_states[page_week];
 		float progress = Detection.weeklyScoreToProgress(score.intValue());
 		String stageText = String.valueOf(page_week + 1);

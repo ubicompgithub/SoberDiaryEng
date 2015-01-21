@@ -89,6 +89,7 @@ public class QuoteMsgBox {
 			help.setText(learningArray[page%12]);
 		}else{
 			int idx = rand.nextInt(learningArrayExtend.length);
+			idx = 12;// FOR TEST!!!!!!!!!!!!!!!!!!!
 			help.setText(learningArrayExtend[idx]);
 		}
 		return;
