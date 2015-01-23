@@ -118,7 +118,6 @@ public class NotificationDialog {
 			return false;
 
 		boolean check = PreferenceControl.showNotificationDialog();
-		// check = true; // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!!
 		if (!check)
 			return false;
 
@@ -167,7 +166,6 @@ public class NotificationDialog {
 			} else if (show_dialog[i])
 				--randNum;
 		}
-		// type = 8; // FOR TEST!!!!!!!!!!!!!!!!!!!!
 		settingType(type);
 
 		clear();

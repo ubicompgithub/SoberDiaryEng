@@ -12,7 +12,7 @@
     	android:layout_height="wrap_content" 
     	android:layout_centerHorizontal="true"
     	android:layout_marginLeft="29.3dp"
-        android:layout_marginRight="29.3dp"
+        android:layout_marginRight="10dp"
     	android:splitMotionEvents="false"
     	android:orientation="vertical">
     	
@@ -164,7 +164,7 @@
 
     			<TextView
 	    		    android:id = "@+id/msg_emotion_show_text"
-    		    	android:layout_width="60dp"
+    		    	android:layout_width="90dp"
         			android:layout_height="wrap_content"
         			android:textColor="@color/dark_gray"
         			android:layout_gravity="center"
@@ -179,7 +179,7 @@
     	    android:id="@+id/msg_craving_layout"
     	    android:layout_width= "match_parent"
     	    android:layout_height="wrap_content"
-    	    android:layout_marginBottom="26dp"
+    	    android:layout_marginBottom="18dp"
     	    >
 
     	    <TextView
@@ -347,7 +347,7 @@
     				android:layout_height="wrap_content"
     				android:orientation="vertical"
     				android:layout_alignParentRight="true"
-    				android:layout_marginRight="-20dp"
+    				
         			>
 
     				<ImageView
@@ -360,7 +360,7 @@
 
     				<TextView
 		    		    android:id = "@+id/msg_craving_show_text"
-    		    		android:layout_width="80dp"
+    		    		android:layout_width="90dp"
         				android:layout_height="wrap_content"
         				android:textColor="@color/dark_gray"
         				android:layout_marginTop="5dp"

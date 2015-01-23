@@ -258,17 +258,17 @@ public class TestFragment extends Fragment implements GPSInterface, TestQuestion
 		LoadingDialogControl.dismiss();
 
 		// FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Should be deleted
-		PreferenceControl.setShowAdditonalQuestionnaire();
-		addBox = new AdditionalQuestionDialog(main_layout, testFragment);
-		addBox.show();
+		// PreferenceControl.setShowAdditonalQuestionnaire();
+		// addBox = new AdditionalQuestionDialog(main_layout, testFragment);
+		// addBox.show();
 
 		// FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Should be restored
-		// if (PreferenceControl.showAdditionalQuestionnaire()) {
-		// 	PreferenceControl.setShowAdditonalQuestionnaire();
-		// 	addBox = new AdditionalQuestionDialog(main_layout, testFragment);
-		// 	addBox.show();
-		// } else
-		// 	notificationDialog.initialize();
+		if (PreferenceControl.showAdditionalQuestionnaire()) {
+			PreferenceControl.setShowAdditonalQuestionnaire();
+			addBox = new AdditionalQuestionDialog(main_layout, testFragment);
+			addBox.show();
+		} else
+			notificationDialog.initialize();
 	}
 
 	@Override

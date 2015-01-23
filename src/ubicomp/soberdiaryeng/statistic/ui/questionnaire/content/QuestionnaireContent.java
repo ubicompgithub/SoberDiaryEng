@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.util.TypedValue; // FOR TEST!!!!!!!!!!!!!!!!!!!
+import android.util.TypedValue;
 
 abstract public class QuestionnaireContent {
 	
@@ -41,7 +41,6 @@ abstract public class QuestionnaireContent {
 		this.context = App.getContext();
 		if (inflater == null)
 			inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		// wordTypefaceBold = msgBox.getTypeface();
 		wordTypeface = Typefaces.getWordTypeface();
 	}
 	
@@ -65,7 +64,7 @@ abstract public class QuestionnaireContent {
 		TextView text = (TextView) v.findViewById(R.id.questionnaire_text);
 		text.setText(str);
 		text.setTypeface(wordTypeface);
-		text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize); // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!
+		text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
 		
 		ImageView button =(ImageView) v.findViewById(R.id.questionnaire_button);
 		button.setImageDrawable(choiceDrawable);
@@ -80,7 +79,7 @@ abstract public class QuestionnaireContent {
 		TextView text = (TextView) v.findViewById(R.id.questionnaire_text);
 		text.setText(str_id);
 		text.setTypeface(wordTypeface);
-		text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize); // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!
+		text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
 		
 		ImageView button =(ImageView) v.findViewById(R.id.questionnaire_button);
 		button.setImageDrawable(choiceDrawable);
