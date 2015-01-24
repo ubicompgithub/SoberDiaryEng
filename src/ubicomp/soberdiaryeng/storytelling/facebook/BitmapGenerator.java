@@ -17,7 +17,7 @@ public class BitmapGenerator {
 	public static Bitmap generateBitmap(int week, int score) {
 		int res_id = StorytellingGraphics.getPage(score, week);
 
-		QUOTE_STR = App.getContext().getResources().getStringArray(R.array.quote_message);
+		QUOTE_STR = App.getContext().getResources().getStringArray(R.array.quote_message_facebook);
 		
 		BitmapFactory.Options opts = new BitmapFactory.Options();
 		opts.inSampleSize = 2;
@@ -44,7 +44,7 @@ public class BitmapGenerator {
 		Paint titlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		titlePaint.setColor(black);
 		titlePaint.setAlpha(35);
-		titlePaint.setTextSize(textSize * 3);
+		titlePaint.setTextSize(textSize * 2);
 		titlePaint.setTypeface(Typefaces.getWordTypefaceBold());
 		titlePaint.setTextAlign(Align.CENTER);
 

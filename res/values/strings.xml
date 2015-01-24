@@ -95,17 +95,17 @@
     <string name="test_guide_recovery_top">Please wait</string>
     <string name="test_guide_recovery_bottom">Breathalyzer is recovering</string>
     
-    <string name="test_guide_recovery_update_top">Finish the re-test ASAP once the breathalyzer is ready</string>
+    <string name="test_guide_recovery_update_top">Re-test ASAP once the breathalyzer is ready</string>
     <string name="test_guide_recovery_update_bottom">Breathalyzer is recovering</string>
     
     <string name="test_guide_not_turn_on">Breathalyzer is off</string>
     <string name="test_guide_test_fail">Breathalyzer is out of power</string>
     <string name="test_guide_test_timeout">Test timeout!</string> 
     <string name="test_guide_connect_fail">Bluetooth connection failed</string> 
-    <string name="test_guide_multi_blow">Breathalyzer failed due to an unsteady breath</string>
-    <string name="test_guide_zero_duration">Connection failed. Please reboot the breathalyzer &amp; phone.</string>
-    <string name="test_guide_pressure_error">Breathalyzer malfunctioned. Please contact the developer.</string>
-    <string name="test_guide_high_initial">Breathalyzer is recovering. Turn it on and put it in a dry and ventilated place for 2 mins. </string>
+    <string name="test_guide_multi_blow">Test failed due to an unsteady breath</string>
+    <string name="test_guide_zero_duration">Reboot your breathalyzer &amp; phone and test again</string>
+    <string name="test_guide_pressure_error">Breathalyzer malfunctioned and contact the developer</string>
+    <string name="test_guide_high_initial">Turn your breathalyzer on and place in a ventilated place for 2 m</string>
     
     <string name="test_guide_msg_box">Follow instructions</string>
     
@@ -232,7 +232,7 @@
     <string name="default_goal_good">Motorcycle</string>
     <string name="default_forbidden">You don\'t participate in the study, \nso can\'t perform tests.</string>
     <string name="open_gps">Please grant the permission to access your location.</string>
-    <string name="check_do_not_keep_activities">You have turned on \'Don\'t keep activities\' and turned off \'Location access\' options.\n Please go to the setting page (\'Settings\'->\'Developer options\') to uncheck the \'Don\'t keep activities\' option.\n The app won\'t report your location associated with the current test.</string>
+    <string name="check_do_not_keep_activities">Unable to report your location for the current test.\n Turn \'Location access\' option on and uncheck the \'Don\'t keep activities\' option in the setting page (\'Settings\'->\'Developer options\').</string>
     <string name="email"><u>ubicomplab.ntu@gmail.com</u></string>
     <string name="email_subject">[SoberDiary]Issue reporting.</string>
     <string name="email_message">How to send emails?</string>
@@ -243,7 +243,7 @@
     <string name="know">GOT IT</string>
     <string name="bonus">Special rewards.</string>
 
-    <string name="lock_message">Congratulations on completing 3-month intervention study. Thank you for the cooperations during the study and hope you can continue to maintain sober in the future!\n\n Because of the requirement of the study, you have to stop using the SoberDiary app for the following 3 months. In this following 3 months, please regularly revist the hospital for following medical reviews. Thank you again for your cooperations.\n\n You can choose either to uninstall the app from your phone or temporarily keep the app in your phone. After complete the following 3 months, you can contact us by dialing the phone number shown in the "About" page. We can unlock the app for you to use. Thanks! \n\n Best regards, \n\n SoberDiary development team</string>
+    <string name="lock_message">Congratulations on completing 3-month intervention study. Thank you for the cooperations and hope you can continue to maintain sober in the future!\n\n Because of the requirement of the study, you have to stop using this app for the following 3 months. In these 3 months, please regularly revist the hospital for following medical reviews. \n\n You can choose either to uninstall the app from your phone or temporarily keep the app in your phone. After completing the following 3 months, you can contact us by dialing the phone number shown in the "About" page. We can unlock the app for you to use. Thanks! \n\n Best regards, \n\n SoberDiary development team</string>
     <string name="lock_about">SoberDiary Locked!</string>
     <string name="radar_title">MY PERFORMANCE\nANALYSIS</string>
     <string name="radar_label0">Alcohol\nscreening</string>
@@ -273,14 +273,14 @@
     </string-array>
     
     <string-array name="radar_1_0">
-        <item>Once completing a test, click the \'!\' sign to seek for quick self-adjustment tips</item>
+        <item>Once completing a test, click the \'!\' sign to seek for self-adjustment tips</item>
         <item>Once completing a test, use Self-Adjustment function to read inspirational quotes or seeks advises</item>
         <item>Well done, keep work hard!!</item>
     </string-array>
     
     <string-array name="radar_1_1">
         <item>Always consult SoberDiary for relapse prevention or handling skills.</item>
-        <item>When you\'re in a bad mood, use Skill Suggestion function to help relieve you ease</item>
+        <item>When you\'re in a bad mood, use Skill-Suggestion function to help relieve you ease</item>
         <item>Well done, keep work hard!!</item>
     </string-array>
     
@@ -332,7 +332,7 @@
         <item>Agree</item>
         <item>Strongly agree</item>
     </string-array>
-	<string name="storytelling_test_toast">You didn\'t select an answer.</string>
+	<string name="storytelling_test_toast">Didn\'t select any answer.</string>
 	<string name="storytelling_test_correct">You are right!</string>
 	<string name="storytelling_test_incorrect">Wrong answer. please try again!</string>
     
@@ -349,7 +349,7 @@
     <string name="today_upercase">TODAY</string>
 	
 	<string name="gcm_title">Notification</string>
-	<string name="sensor_wait">The breathalyzer is recovering. Please try again!</string>
+	<string name="sensor_wait">Breathalyzer recovering... Please try again!</string>
 	<string name="sensor_wait_try_again">After the breathalyzer is recovered, please try again!</string>
 	<string name= "try_again_test_help">Once count to zero, please try again!</string>
 	
@@ -379,13 +379,13 @@
 	<string-array name="notification_comments">
 	    <item>Regularly performing alcohol tests is the first step to success.</item>
 	    <item>Filling questions in the dialog popped out every night helps you understand yourself.</item>
-	    <item>Using the \"Skill-Suggestion\" function can help you to relieve your stress.</item>
-	    <item>Using the \"Feeling-Recording\" function can let you more understand yourself.</item>
-	    <item>Logging alcohol triggers using with the \"Mood-Sampling\" function can help you break negative feedback loops.</item>
+	    <item>Using \"Skill-Suggestion\" function can help you to relieve your stress.</item>
+	    <item>Using \"Feeling-Recording\" function can let you more understand yourself.</item>
+	    <item>Logging alcohol triggers with \"Mood-Sampling\" function can help break negative feedback loops.</item>
 	    <item>Browse the self-fulfilling guide everyday. You will extend your knowledge. </item>
 	    <item>Do you want to share your achievements to friends through facebook?</item>
 	    <item>After completing tests, click the \"quick Self-Adjustment\" to get tips for maintaining sober.</item>
-	    <item>Fill opinions towards self-fulfilling sentences to test how well your understand or agree with those sentences.</item>
+	    <item>Answer questions to know how well your understand or agree with self-fulfilling sentences.</item>
 	</string-array>
 	
 	<string name="edit">Edit</string>

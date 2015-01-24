@@ -22,21 +22,21 @@ public final class R {
         public static final int animation_walk=0x7f04000a;
     }
     public static final class array {
-        public static final int about_message=0x7f0b0029;
-        public static final int agreement=0x7f0b0033;
-        public static final int analysis_rank_change_help=0x7f0b0026;
-        public static final int audio_box_help=0x7f0b0027;
-        public static final int craving_state=0x7f0b0024;
+        public static final int about_message=0x7f0b002a;
+        public static final int agreement=0x7f0b0034;
+        public static final int analysis_rank_change_help=0x7f0b0027;
+        public static final int audio_box_help=0x7f0b0028;
+        public static final int craving_state=0x7f0b0025;
         public static final int emotionDIY_solution=0x7f0b0000;
         public static final int emotion_manage_emotion=0x7f0b0001;
         public static final int emotion_manage_related=0x7f0b0002;
         public static final int emotion_manage_related_lowercase=0x7f0b0003;
-        public static final int emotion_state=0x7f0b0023;
+        public static final int emotion_state=0x7f0b0024;
         public static final int fb_selection=0x7f0b0004;
-        public static final int notification_comments=0x7f0b0035;
-        public static final int notification_subtitles=0x7f0b0034;
+        public static final int notification_comments=0x7f0b0036;
+        public static final int notification_subtitles=0x7f0b0035;
         public static final int question_inspire_question=0x7f0b0005;
-        public static final int question_reading_question=0x7f0b0022;
+        public static final int question_reading_question=0x7f0b0023;
         public static final int question_solutions=0x7f0b0006;
         public static final int quote_answer_0=0x7f0b000b;
         public static final int quote_answer_1=0x7f0b000d;
@@ -53,6 +53,7 @@ public final class R {
         public static final int quote_learning=0x7f0b0008;
         public static final int quote_learning_extend=0x7f0b0009;
         public static final int quote_message=0x7f0b0007;
+        public static final int quote_message_facebook=0x7f0b0022;
         public static final int quote_question_0=0x7f0b000a;
         public static final int quote_question_1=0x7f0b000c;
         public static final int quote_question_10=0x7f0b001e;
@@ -65,18 +66,18 @@ public final class R {
         public static final int quote_question_7=0x7f0b0018;
         public static final int quote_question_8=0x7f0b001a;
         public static final int quote_question_9=0x7f0b001c;
-        public static final int radar_0=0x7f0b002a;
-        public static final int radar_1_0=0x7f0b002b;
-        public static final int radar_1_1=0x7f0b002c;
-        public static final int radar_2_0=0x7f0b002d;
-        public static final int radar_2_1=0x7f0b002e;
-        public static final int radar_2_2=0x7f0b002f;
-        public static final int radar_3_0=0x7f0b0030;
-        public static final int radar_3_1=0x7f0b0031;
-        public static final int radar_3_2=0x7f0b0032;
-        public static final int setting_time_gap=0x7f0b0028;
-        public static final int test_guide_msg=0x7f0b0036;
-        public static final int tutorial_step=0x7f0b0025;
+        public static final int radar_0=0x7f0b002b;
+        public static final int radar_1_0=0x7f0b002c;
+        public static final int radar_1_1=0x7f0b002d;
+        public static final int radar_2_0=0x7f0b002e;
+        public static final int radar_2_1=0x7f0b002f;
+        public static final int radar_2_2=0x7f0b0030;
+        public static final int radar_3_0=0x7f0b0031;
+        public static final int radar_3_1=0x7f0b0032;
+        public static final int radar_3_2=0x7f0b0033;
+        public static final int setting_time_gap=0x7f0b0029;
+        public static final int test_guide_msg=0x7f0b0037;
+        public static final int tutorial_step=0x7f0b0026;
     }
     public static final class attr {
         /** <p>Must be one of the following constant values.</p>

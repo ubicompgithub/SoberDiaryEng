@@ -79,12 +79,12 @@
         <item>eager</item>
         <item>apathetic</item>
         <item>uneager</item>
-        <item>unwilling</item>
+        <item>sad</item>
         <item>reluctant</item>
         <item>abstinence</item>
         <item>failure</item>
         <item>hell</item>
-        <item>depression</item>
+        <item>wealth</item>
         <item>violence</item>
         <item>achieve</item>
         <item>fail</item>
@@ -122,14 +122,14 @@
     <string-array name="quote_answer_3">
         <item>aware</item>
         <item>doubted</item>
-        <item>insensible</item>
-        <item>oblivious</item>
+        <item>sad</item>
+        <item>unaware</item>
         <item>unaware</item>
         <item>failure</item>
         <item>success</item>
         <item>victory</item>
         <item>illusion</item>
-        <item>destruction</item>
+        <item>loss</item>
         <item>Treasure</item>
         <item>Ignore</item>
         <item>Waste</item>
@@ -144,13 +144,13 @@
     <string-array name="quote_answer_4">
         <item>self-love</item>
         <item>cheating</item>
-        <item>selfishness</item>
+        <item>guessing</item>
         <item>antipathy</item>
         <item>hate</item>
         <item>yourself</item>
         <item>blaming</item>
         <item>cheating</item>
-        <item>destroying</item>
+        <item>money</item>
         <item>failure</item>
         <item>love</item>
         <item>game</item>
@@ -172,7 +172,7 @@
         <item>fear</item>
         <item>joy</item>
         <item>happiness</item>
-        <item>delight</item>
+        <item>advance</item>
         <item>pleasure</item>
         <item>awareness</item>
         <item>anger</item>
@@ -209,14 +209,14 @@
     </string-array>
     <string-array name="quote_answer_7">
         <item>challenges</item>
-        <item>solutions</item>
-        <item>advantages</item>
-        <item>efficiencies</item>
-        <item>accomplishments</item>
+        <item>games</item>
+        <item>away</item>
+        <item>loss</item>
+        <item>west</item>
         <item>deficiencies</item>
-        <item>efficiencies</item>
-        <item>accomplishments</item>
-        <item>motivations</item>
+        <item>west</item>
+        <item>gains</item>
+        <item>rewards</item>
         <item>advantages</item>
         <item>master</item>
         <item>face</item>
@@ -241,10 +241,10 @@
         <item>simpler</item>
         <item>quicker</item>
         <item>sobriety</item>
-        <item>intemperance</item>
+        <item>loss</item>
         <item>wildness</item>
-        <item>uncertainty</item>
-        <item></item>
+        <item>children</item>
+        <item>reasons</item>
     </string-array>
     <string-array name="quote_question_9">
         <item>You believe you don\'t have to be great to start, but you have to start to be ___.</item>
@@ -304,8 +304,8 @@
         <item>living</item>
         <item>joke</item>
         <item>hole</item>
-        <item>screenshot</item>
-        <item>video</item>
+        <item>loss</item>
+        <item>danger</item>
         <item>give</item>
         <item>waste</item>
         <item>talk</item>
@@ -314,4 +314,19 @@
     </string-array>
 
     <string name="quote_blank">___</string>
+    
+    <string-array name="quote_message_facebook">
+        <item>Alcohol is the worst enemy.\nDon\'t let it master you. Never give up!</item>
+        <item>You have been eager to step on the road to\nabstinence for a long time. You are on the way to\nachieve the goal and getting better and better.</item>
+        <item>Do not wait for your ship to come in\n- swim out to it.</item>
+        <item>You are aware that you are getting better\nthrough failure. Treasure each day that you\nstay sober.</item>
+        <item>You start to understand and love yourself.\nYour first and last love is self-love.</item>
+        <item>Let us not look back in anger nor forward\nin fear, but around in awareness.</item>
+        <item>You are rich or poor according to what you are,\nnot according to what you has. You should\nbe determined to keep yourself sober.</item>
+        <item>You are facing challenges of being sober.\nFace your deficiencies and acknowledge them,\nbut do not let them master you.</item>
+        <item>You are a great believer in luck. You find that\nthe harder you work on maintaining sobriety,\nthe more sobriety you have.</item>
+        <item>You believe you don\'t have to be great to start,\nbut you have to start to be great. </item>
+        <item>A good goal is like a strenuous exercise\n- it makes you stretch. </item>
+        <item>We make a living by what we get, but we make\na life by what we give! </item>
+    </string-array>
 </resources>
