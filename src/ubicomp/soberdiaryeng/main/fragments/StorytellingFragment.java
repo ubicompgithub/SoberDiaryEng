@@ -691,7 +691,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			fbButton.setVisibility(View.VISIBLE);
 
 			// Let MORE button be visible
-			if( (page_week % (MAX_PAGE_WEEK + 1) != 2) && (page_week % (MAX_PAGE_WEEK + 1) != 10) ) {
+			if( getIsNeedMore() ) {
 				moreButton.setVisibility(View.VISIBLE);
 				moreButton.bringToFront();
 			}
@@ -1252,7 +1252,8 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	}
 
 	private void exitMore(){
-		moreButton.setVisibility(View.VISIBLE);
+		if( getIsNeedMore() )
+			moreButton.setVisibility(View.VISIBLE);
 		quoteText.setVisibility(View.VISIBLE);
 		stageRateText.setVisibility(View.VISIBLE);
 
@@ -1296,4 +1297,9 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		moreQuote.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
 	}
 
+	private boolean getIsNeedMore(){
+		// Only week 3, 11 need more button
+		return
+			(page_week % (MAX_PAGE_WEEK + 1) != 2) && (page_week % (MAX_PAGE_WEEK + 1) != 10);
+	}
 }

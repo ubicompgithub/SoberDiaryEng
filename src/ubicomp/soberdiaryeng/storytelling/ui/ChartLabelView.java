@@ -80,7 +80,7 @@ public class ChartLabelView extends View {
 			
 			canvas.drawRect(from, top, from + base, base + top, brac_paint);
 			from += base + gap1*0.7;
-			canvas.drawText(type_str[2], from, top2, text_paint);  // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!
+			canvas.drawText(type_str[2], from, top2, text_paint);
 		} else {
 			from += gap*58/3;
 

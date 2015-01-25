@@ -44,11 +44,11 @@ public class BitmapGenerator {
 		Paint titlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		titlePaint.setColor(black);
 		titlePaint.setAlpha(35);
-		titlePaint.setTextSize(textSize * 2);
+		titlePaint.setTextSize(textSize * 3);
 		titlePaint.setTypeface(Typefaces.getWordTypefaceBold());
 		titlePaint.setTextAlign(Align.CENTER);
 
-		int top_margin = image_y * 428 / 480;
+		int top_margin = image_y * 410 / 480;
 		int left_margin = image_x * 45 / 480;
 
 		String[] strs = QUOTE_STR[week%12].split("\n");

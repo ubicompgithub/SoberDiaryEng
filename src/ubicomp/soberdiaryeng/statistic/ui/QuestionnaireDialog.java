@@ -29,7 +29,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import android.util.TypedValue; // FOR TEST!!!!!!!!!!!!!!!!!!!
+import android.util.TypedValue;
 
 /**
  * Dialog of the '!'Questionnaire

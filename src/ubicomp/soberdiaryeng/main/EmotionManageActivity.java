@@ -103,8 +103,6 @@ public class EmotionManageActivity extends Activity {
 				+ " " + getString(R.string.emotion_manage_title1) + " ON " + curTV.toSimpleDateString() );
 		}
 
-		// View title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_title0)
-		// 		+ getString(R.string.emotion_manage_title1) + "on"	+ curTV.toSimpleDateString() );    // FOR TEST!!!!!!!!!!!!!!!!!!!!!
 		titleLayout.addView(title);
 
 	}
