@@ -44,7 +44,7 @@ public class BitmapGenerator {
 		Paint titlePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 		titlePaint.setColor(black);
 		titlePaint.setAlpha(35);
-		titlePaint.setTextSize(textSize * 3);
+		titlePaint.setTextSize(textSize * (float)2.5 );
 		titlePaint.setTypeface(Typefaces.getWordTypefaceBold());
 		titlePaint.setTextAlign(Align.CENTER);
 

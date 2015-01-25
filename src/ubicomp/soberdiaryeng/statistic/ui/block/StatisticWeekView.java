@@ -91,11 +91,7 @@ public class StatisticWeekView extends StatisticPageView {
 			time_labels[i] = new TextView(context);
 			time_labels[i].setTextSize(TypedValue.COMPLEX_UNIT_PX,textSize1);
 			time_labels[i].setTextColor(text_color);
-			time_labels[i].setSingleLine(true); // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			// time_labels[i].setPadding(-20, -10, 10, -10); // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			// time_labels[i].setFadingEdgeLength(50); // FOR TEST!!!!!!!!!!!!!!!!!!!!!!!!!
-			// time_labels[i].setMinEms(500); // FOR TEST!!!!!!!!!!!!!!!
-			// time_labels[i].setWidth(500);  // FOR TEST!!!!!!!!!!!!!!!
+			time_labels[i].setSingleLine(true);
 			time_labels[i].setText(blockHint[i]);
 			time_labels[i].setTypeface(wordTypeface);
 			time_labels[i].setGravity(Gravity.CENTER);
@@ -107,6 +103,7 @@ public class StatisticWeekView extends StatisticPageView {
 		for (int i=0;i<nDays;++i){
 			date_labels[i] = new TextView(context);
 			date_labels[i].setTextSize(TypedValue.COMPLEX_UNIT_PX,textSize2);
+			date_labels[i].setSingleLine();
 			date_labels[i].setTextColor(text_color);
 			date_labels[i].setGravity(Gravity.CENTER);
 			date_labels[i].setTypeface(digitTypefaceBold);

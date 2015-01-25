@@ -38,10 +38,12 @@
 	
 	     <TextView
             android:id="@+id/statistic_month_0"
-            android:layout_width="35dp"
+            android:layout_width="wrap_content"
+            android:minWidth="35dp"
             android:layout_height="32dp"
             android:layout_marginRight="21dp"
             android:textSize="@dimen/normal_text_size"
+            android:singleLine="true"
             android:layout_toRightOf="@+id/statistic_month_timeblock_label_layout"
             android:layout_below="@+id/statistic_month_block_layout"
             android:textColor="@color/text_gray"
@@ -49,10 +51,12 @@
             />
       <TextView
             android:id="@+id/statistic_month_1"
-            android:layout_width="35dp"
+            android:layout_width="wrap_content"
+            android:minWidth="35dp"
             android:layout_height="32dp"
             android:layout_marginRight="21dp"
             android:textSize="@dimen/normal_text_size"
+            android:singleLine="true"
             android:layout_below="@+id/statistic_month_block_layout"
             android:textColor="@color/text_gray" 
             android:gravity="center"
@@ -60,10 +64,12 @@
             />
       <TextView
             android:id="@+id/statistic_month_2"
-            android:layout_width="35dp"
+            android:layout_width="wrap_content"
+            android:minWidth="35dp"
             android:layout_height="32dp"
             android:layout_marginRight="21dp"
             android:textSize="@dimen/normal_text_size"
+            android:singleLine="true"
             android:layout_below="@+id/statistic_month_block_layout"
             android:textColor="@color/text_gray" 
             android:gravity="center"
@@ -71,9 +77,11 @@
             />
       <TextView
             android:id="@+id/statistic_month_3"
-            android:layout_width="35dp"
+            android:layout_width="wrap_content"
+            android:minWidth="35dp"
             android:layout_height="32dp"
             android:textSize="@dimen/normal_text_size"
+            android:singleLine="true"
             android:layout_below="@+id/statistic_month_block_layout"
             android:textColor="@color/text_gray" 
             android:gravity="center"
