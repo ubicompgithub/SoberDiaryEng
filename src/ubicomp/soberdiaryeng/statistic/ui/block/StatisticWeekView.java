@@ -118,7 +118,7 @@ public class StatisticWeekView extends StatisticPageView {
 			circles[i].setScaleType(ScaleType.CENTER);
 		}
 		
-		// Layout of "Pass", "Not Pass" and "Incomplete"
+		// Layout of "Pass", "Not Pass" and "Skipped"
 		labels = new TextView[3];
 		labelImgs = new ImageView[3];
 		for (int i=0;i<3;++i){

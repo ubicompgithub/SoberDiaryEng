@@ -144,7 +144,8 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			.getColor(R.color.white);
 	private int value_color = App.getContext().getResources()
 			.getColor(R.color.lite_orange);
-	private static final long READING_PAGE_TIME = Config.READING_PAGE_TIME;
+	private static final long READING_PAGE_TIME = 1000; // BlueZhong: private static final long READING_PAGE_TIME = Config.READING_PAGE_TIME;
+	
 	private RecordBox recordBox;
 	private QuoteMsgBox quoteMsgBox;
 
@@ -446,9 +447,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		stageRateText.setText(p_str);
 		quoteText.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
 		setMoreTexts();
-		// FOR TEST!!!!!!!!!!!!!!!
-		// LayoutParams params = new LayoutParams(250,LayoutParams.WRAP_CONTENT);
-		// quoteText.setLayoutParams(params);
 	}
 
 	private void endAnimation() {
@@ -999,7 +997,7 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 				PreferenceControl.addStorytellingReadTimes();
 				int limit = Config.STORYTELLING_READ_LIMIT;
 				if (PreferenceControl.isDeveloper())
-					limit = 2;
+					limit = 1; // BlueZhong !!!!!!!!!!! limit = 2; -> limit = 1;
 				if (db.getLatestStorytellingRead().getTv().getTimestamp() == 0)
 					limit /= 2;
 				int cur_times = PreferenceControl.getStorytellingReadTimes();
@@ -1302,4 +1300,5 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		return
 			(page_week % (MAX_PAGE_WEEK + 1) != 2) && (page_week % (MAX_PAGE_WEEK + 1) != 10);
 	}
+
 }

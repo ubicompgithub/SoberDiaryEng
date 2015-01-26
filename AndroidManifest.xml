@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ubicomp.soberdiaryeng.main"
-    android:versionCode="127"
-    android:versionName="1.50m_beta"
+    android:versionCode="128"
+    android:versionName="1.50n_beta"
     android:installLocation="auto" >
 
     <uses-sdk
