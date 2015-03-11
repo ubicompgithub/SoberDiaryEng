@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.os.AsyncTask;
+import android.util.Log;
 
 public class PageAnimationTaskVertical extends AsyncTask<Void, Void, Void> {
 

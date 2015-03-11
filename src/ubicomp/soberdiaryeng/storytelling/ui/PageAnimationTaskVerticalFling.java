@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PointF;
 import android.os.AsyncTask;
+import android.util.Log;
 
 public class PageAnimationTaskVerticalFling extends AsyncTask<Void, Void, Void> {
 
@@ -54,7 +55,7 @@ public class PageAnimationTaskVerticalFling extends AsyncTask<Void, Void, Void> 
 			
 			pageWidget.setBitmaps(cur, next);
 			pageWidget.setTouchPosition(from);
-			
+
 			PointF touch = new PointF(from.x,from.y);
 			
 			for (int i=0;i<gaps;++i){
@@ -67,7 +68,6 @@ public class PageAnimationTaskVerticalFling extends AsyncTask<Void, Void, Void> 
 			}
 			
 			caller.resetPage(+1);
-			
 			
 		}else{ //next to cur (DOWN)
 			next=pageWidget.getCurPageBmp();

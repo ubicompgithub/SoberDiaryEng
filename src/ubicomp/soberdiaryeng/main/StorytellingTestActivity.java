@@ -15,6 +15,7 @@ import ubicomp.soberdiaryeng.system.clicklog.ClickLogId;
 import ubicomp.soberdiaryeng.system.config.PreferenceControl;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -58,7 +59,7 @@ public class StorytellingTestActivity extends Activity {
 	private TextView agreementText;
 	private String[] agreementLevel;
 
-	private static final String[] labels = { "A.", "B.", "C." };
+	// private static final String[] labels = { "A.", "B.", "C." }; // BlueZhong 
 
 	private static final int MIN_BARS = ScreenSize.getMinBars();
 
@@ -196,6 +197,7 @@ public class StorytellingTestActivity extends Activity {
 		}
 	}
 
+	// Create the options
 	private View createSelectionView(String[] selectionStrs) {
 		FrameLayout layout = (FrameLayout) inflater.inflate(R.layout.bar_multi_select_item, null);
 		selections[0] = (RadioButton) layout.findViewById(R.id.question_select0);
@@ -203,7 +205,10 @@ public class StorytellingTestActivity extends Activity {
 		selections[2] = (RadioButton) layout.findViewById(R.id.question_select2);
 
 		for (int i = 0; i < selectionStrs.length; ++i) {
-			selections[i].setText(labels[i] + selectionStrs[i]);
+			// BlueZhong 
+			// selections[i].setText(labels[i] + selectionStrs[i]);
+			selections[i].setText(selectionStrs[i]);
+
 			selections[i].setOnCheckedChangeListener(new SelectionChangeListener());
 			selections[i].setTypeface(wordTypefaceBold);
 		}
@@ -255,10 +260,17 @@ public class StorytellingTestActivity extends Activity {
 		public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 			if (isChecked) {
 				ClickLog.Log(ClickLogId.STORYTELLING_TEST_SELECT);
-				for (int i = 0; i < selections.length; ++i)
-					if (selections[i].getId() != buttonView.getId())
+				for (int i = 0; i < selections.length; ++i){
+					if (selections[i].getId() != buttonView.getId()){
 						selections[i].setChecked(false);
-				selectedAnswer = buttonView.getText().toString().substring(2);
+						selections[i].setTextColor( getResources().getColor(R.color.text_gray) );   //BlueZhong  !!!!!!!!!!!!!!!!
+					}
+					else{
+						selections[i].setTextColor( getResources().getColor(R.color.orange) );  //BlueZhong  !!!!!!!!!!!!!!!!
+					}
+				}
+				// selectedAnswer = buttonView.getText().toString().substring(2);  //BlueZhong  Need to be modified cause I removed the A. B. C. !!!!!!!!!!!!!!!! 
+				selectedAnswer = buttonView.getText().toString();  //BlueZhong  !!!!!!!!!!!!!!!! 
 			}
 		}
 	}

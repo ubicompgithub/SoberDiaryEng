@@ -10,23 +10,23 @@
     </string-array>
     
     <string name="emotionDIY_title">SKILL SUGGESTION</string>
-    <string name="emotionDIY_help">Prevent or handle relapses ...</string>
-    <string name="emotionDIY_toast">Continue to give up using the skill suggestion function?</string>
+    <string name="emotionDIY_help">To prevent or handle relapses, you can...</string>
+    <string name="emotionDIY_toast">Quit using the Skill Suggestion function?</string>
     <string name="emotion_end_message">Complete following suggestions. Keep working on it\n (Complete this to win credits in morning, afternoon, or night slot) </string>
-    <string name="emotion_connect_null">No contact\nPlease return</string>
+    <string name="emotion_connect_null">No contact yet\nPlease return</string>
     <string name="emotion_manage_title0">FILL</string>
     <string name="emotion_manage_title1">MOOD SAMPLING</string>
-    <string name="emotion_manage_toast">Continue to give up using mood sampling function?</string>
+    <string name="emotion_manage_toast">Quit using mood sampling function?</string>
     
-    <string name="emotionDIY_end_toast">Follow skill suggestions</string>
+    <string name="emotionDIY_end_toast">Follow Skill Suggestion</string>
     <string name="emotion_manage_end_toast">Complete mood sampling</string>
     <string name="emotion_manage_check_toast">Remember to input emotional triggers</string>
-    <string name="emotionDIY_help_case0">Close your eyes and focuse on listening relaxing musics.</string>
-    <string name="emotionDIY_help_case1">Try to focus on breathing\nFollow guidance of the audio recording. </string>
-    <string name="emotionDIY_help_case2">Try to focus on exercising walking\nFollow guidance of the audio recording</string>
+    <string name="emotionDIY_help_case0">Close your eyes and focus on listening relaxing musics</string>
+    <string name="emotionDIY_help_case1">Try to deep breathing\nFollow guidance of the audio recording</string>
+    <string name="emotionDIY_help_case2">Go take a walk\nFollow guidance of the audio recording</string>
     <string name="emotionDIY_help_case3">Perform one of the following recreational activities?</string>
     <string name="emotionDIY_help_case3_2">No recreational activity. Please return</string>
-    <string name="emotionDIY_help_case4">You will do...</string>
+    <string name="emotionDIY_help_case4">I will do...</string>
     <string name="emotionDIY_help_guide">Play instructions</string>
     <string name="try_to_do">I\'ll finish the task</string>
     

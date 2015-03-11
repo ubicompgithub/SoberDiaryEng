@@ -144,8 +144,8 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			.getColor(R.color.white);
 	private int value_color = App.getContext().getResources()
 			.getColor(R.color.lite_orange);
-	private static final long READING_PAGE_TIME = 1000; // BlueZhong: private static final long READING_PAGE_TIME = Config.READING_PAGE_TIME;
-	
+	private static final long READING_PAGE_TIME = Config.READING_PAGE_TIME;
+
 	private RecordBox recordBox;
 	private QuoteMsgBox quoteMsgBox;
 
@@ -159,16 +159,17 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			R.drawable.small_arrow_left_down, R.drawable.small_arrow_down,
 			R.drawable.small_arrow_down, R.drawable.small_arrow_right_down };
 	private Point[] page_update_pos = new Point[16];
-
-	// private static final String TAG = "STORYTELLING";
 	
 	private int notify_action = 0;
 
 	private ImageView moreButton, moreBackground;
-	private TextView moreQuote, moreProcess;
+	private TextView moreQuote;
 	private boolean isMoreOpened = false;
-
+	private boolean isHidenQuoteShowed = false;
 	private int smallTextSize = App.getContext().getResources().getDimensionPixelSize(R.dimen.sn_text_size);
+	private int normalPageWidthMultScreen, normalPageHeightMultScreen;
+	private static final double MORE_EXTEND_RATIO = 1.1696;
+
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -228,7 +229,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.fragment_storytelling, container,
 				false);
-
 		topLayout = (RelativeLayout) view.findViewById(R.id.story_top_layout);
 		pageLayout = (RelativeLayout) view.findViewById(R.id.story_book_layout);
 		scrollView = (HorizontalScrollView) view
@@ -264,14 +264,12 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		chartLabel = (ChartLabelView) view.findViewById(R.id.chartLabelView);
 
 		moreQuote = (TextView) view.findViewById(R.id.story_page_more_quote);
-		moreProcess = (TextView) view.findViewById(R.id.story_page_more_process);
 
 		stageMessage.setTypeface(wordTypefaceBold);
 		stageMessageText.setTypeface(digitTypefaceBold);
 		quoteText.setTypeface(wordTypefaceBold);
 		quoteHiddenText.setTypeface(wordTypefaceBold);
 		moreQuote.setTypeface(wordTypefaceBold);
-		moreProcess.setTypeface(wordTypefaceBold);
 
 		storytellingButton.setOnClickListener(storytellingOnClickListener);
 		fbButton.setOnClickListener(facebookOnClickListener);
@@ -300,7 +298,10 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		RecordCheckTask task = new RecordCheckTask();
 		task.execute();
 		
-		exitMore();
+		hideSpecialQuote();
+
+		if(normalPageWidthMultScreen != 0)
+			exitMore();
 	}
 
 	public class BarInitTask extends AsyncTask<Void, Void, Void> {
@@ -538,9 +539,17 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 				page_week = 0;
 		}
 		Integer score = page_states[page_week];
-		Bitmap tmp = BitmapFactory
+
+		Bitmap tmp;
+		if( isMoreOpened )
+			tmp = BitmapFactory
+				.decodeResource(App.getContext().getResources(),
+						StorytellingGraphics.getMorePage(score, page_week));
+		else
+			tmp = BitmapFactory
 				.decodeResource(App.getContext().getResources(),
 						StorytellingGraphics.getPage(score, page_week));
+
 		cur_bg_bmp = Bitmap.createScaledBitmap(tmp, page_width, page_height,
 				true);
 		tmp.recycle();
@@ -571,10 +580,16 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	private class LoadingHandler extends Handler {
 
 		public void handleMessage(Message msg) {
-
 			page_width = page_width == 0 ? topLayout.getWidth() : page_width;
 			page_height = page_height == 0 ? topLayout.getHeight()
 					: page_height;
+			normalPageWidthMultScreen = page_width;
+			normalPageHeightMultScreen = page_height;
+
+			ViewGroup.MarginLayoutParams stageRateTextLP = (ViewGroup.MarginLayoutParams) stageRateText.getLayoutParams();
+			stageRateTextLP.setMargins( 0, (int) (page_height * 280 / 342 ), 0, 0 );
+			view.requestLayout();
+			stageRateText.setLayoutParams(stageRateTextLP);
 
 			if (page_width == 0 || page_height == 0) {
 				Point imageSize = PreferenceControl.getStorytellingImageSize();
@@ -689,16 +704,15 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			fbButton.setVisibility(View.VISIBLE);
 
 			// Let MORE button be visible
-			if( getIsNeedMore() ) {
+			if( !isMoreOpened && getIsNeedMore() ) {
 				moreButton.setVisibility(View.VISIBLE);
 				moreButton.bringToFront();
 			}
 			else{
 				moreButton.setVisibility(View.INVISIBLE);
 			}
-			if(isMoreOpened){
+			if( isMoreOpened ){
 				moreQuote.setVisibility(View.VISIBLE);
-				moreProcess.setVisibility(View.VISIBLE);
 			}
 
 		} else {
@@ -711,7 +725,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			moreButton.setVisibility(View.INVISIBLE);
 			if(isMoreOpened){
 				moreQuote.setVisibility(View.INVISIBLE);
-				moreProcess.setVisibility(View.INVISIBLE);
 			}
 		}
 	}
@@ -760,7 +773,11 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			float y1 = e1.getY();
 			float y2 = e2.getY();
 			if (y1 - y2 > FLING_THRESHOLD) {// UP
-				int[] aBgs = StorytellingGraphics.getAnimationBgs(page_states);
+				int[] aBgs;
+				if( isMoreOpened )
+					aBgs = StorytellingGraphics.getMoreAnimationBgs(page_states);
+				else
+					aBgs = StorytellingGraphics.getAnimationBgs(page_states);
 				int pageIdx = page_week;
 				if (pageIdx == max_week) {
 					isAnimation = false;
@@ -783,8 +800,13 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 							AsyncTask.THREAD_POOL_EXECUTOR, (Void[]) null);
 				else
 					pageAnimationTask2.execute();
+				
 			} else if (y2 - y1 > FLING_THRESHOLD) {// DOWN
-				int[] aBgs = StorytellingGraphics.getAnimationBgs(page_states);
+				int[] aBgs;
+				if( isMoreOpened )
+					aBgs = StorytellingGraphics.getMoreAnimationBgs(page_states);
+				else
+					aBgs = StorytellingGraphics.getAnimationBgs(page_states);
 				int pageIdx = page_week;
 				if (pageIdx == 0) {
 					isAnimation = false;
@@ -996,11 +1018,13 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			if (time == page_week) {
 				PreferenceControl.addStorytellingReadTimes();
 				int limit = Config.STORYTELLING_READ_LIMIT;
+
 				if (PreferenceControl.isDeveloper())
-					limit = 1; // BlueZhong !!!!!!!!!!! limit = 2; -> limit = 1;
+					limit = 2;
 				if (db.getLatestStorytellingRead().getTv().getTimestamp() == 0)
 					limit /= 2;
 				int cur_times = PreferenceControl.getStorytellingReadTimes();
+				
 				if (cur_times >= limit) {
 					infiniteThread = new InfiniteScroll();
 					infiniteThread.start();
@@ -1009,7 +1033,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 							page_week);
 					quoteHiddenLayout.setVisibility(View.VISIBLE);
 					quoteHiddenLayout.setOnClickListener(listener);
-
 				} else {
 					quoteHiddenLayout.setVisibility(View.GONE);
 					quoteHiddenLayout.setAnimation(null);
@@ -1046,7 +1069,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 				} catch (InterruptedException e) {
 					break;
 				}
-
 				if (isInterrupted())
 					break;
 			}
@@ -1056,12 +1078,19 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	@SuppressLint("HandlerLeak")
 	private class ScrollHandler extends Handler {
 		public void handleMessage(Message msg) {
-			if (msg.what == 0) {// up
+
+			if (msg.what == 0) {// up (hide the "extensive learning" button)
 				quoteScrollView.smoothScrollTo(0, 0);
 				quoteScrollListener.setEnable(true);
-			} else if (msg.what == 1) {// down
+				if( isMoreOpened )
+					moreQuote.setVisibility(View.VISIBLE);
+				else if( getIsNeedMore() )
+					moreButton.setVisibility(View.VISIBLE);
+			} else if (msg.what == 1 && (isMoreOpened || !getIsNeedMore()) ) {// down (show the "extensive learning" button)
 				quoteScrollView.smoothScrollTo(0, quoteScrollView.getBottom());
 				quoteScrollListener.setEnable(false);
+				moreQuote.setVisibility(View.INVISIBLE);
+				moreButton.setVisibility(View.INVISIBLE);
 			}
 		}
 	}
@@ -1079,6 +1108,9 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 			ClickLog.Log(ClickLogId.STORYTELLING_READ);
 			hideSpecialQuote();
 			quoteMsgBox.openBox(page);
+
+			if( isMoreOpened )
+				showMore();
 		}
 
 	}
@@ -1097,7 +1129,8 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		if (scrollHandler != null) {
 			scrollHandler.removeMessages(0);
 			scrollHandler.removeMessages(1);
-			moreButton.setVisibility(View.VISIBLE);
+			if( getIsNeedMore() )
+				moreButton.setVisibility(View.VISIBLE);
 		}
 		quoteScrollView.scrollTo(0, 0);
 		quoteHiddenLayout.setOnClickListener(null);
@@ -1234,14 +1267,50 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	}
 
 	private void showMore(){
+		// Hide the special quote so that the more quote will not cover the unhidden special quote
+		hideSpecialQuote();
+
+		// Extend the storytelling page size
+		page_width = (int) getResources().getDimension(R.dimen.page_width_large);
+		page_height = (int) (normalPageHeightMultScreen * MORE_EXTEND_RATIO);
+		topLayout.setLayoutParams(new LayoutParams(page_width, page_height));
+
+		// Dynamically set the margin of the "stageRateText" for different screen sizes
+		ViewGroup.MarginLayoutParams stageRateTextLP = (ViewGroup.MarginLayoutParams) stageRateText.getLayoutParams();
+		stageRateTextLP.setMargins( 0, (int) ( normalPageHeightMultScreen * 280 / 342 ), 0, 0 );
+		view.requestLayout();
+		stageRateText.setLayoutParams(stageRateTextLP);
+
+		if (pageWidget != null) {
+			if (pageWidget.getParent() != null
+					&& pageWidget.getParent().equals(pageLayout))
+				pageLayout.removeView(pageWidget);
+			pageWidget.clear();
+			pageWidget = null;
+		}
+
+		pageWidget = new PageWidgetVertical(getActivity());
+		pageLayout.addView(pageWidget, 0);
+
+		Integer score = page_states[page_week];
+		Bitmap tmp = BitmapFactory
+			.decodeResource(App.getContext().getResources(),
+					StorytellingGraphics.getMorePage(score, page_week));
+		cur_bg_bmp = Bitmap.createScaledBitmap(tmp, page_width, page_height,
+				true);
+		tmp.recycle();
+
+		pageWidget.setting(page_width, page_height);
+		pageWidget.setBitmaps(cur_bg_bmp, next_bg_bmp);
+		pageWidget.setOnTouchListener(gtListener);
+
+		pageWidget.invalidate();
+
 		moreButton.setVisibility(View.INVISIBLE);
 		quoteText.setVisibility(View.INVISIBLE);
-		stageRateText.setVisibility(View.INVISIBLE);
 		
 		moreQuote.setVisibility(View.VISIBLE);
 		moreQuote.bringToFront();
-		moreProcess.setVisibility(View.VISIBLE);
-		moreProcess.bringToFront();
 		
 		setMoreTexts();
 
@@ -1250,14 +1319,53 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	}
 
 	private void exitMore(){
+		// Shrink the storytelling page size
+		page_width = normalPageWidthMultScreen;
+		page_height = normalPageHeightMultScreen;
+		topLayout.setLayoutParams(new LayoutParams(page_width, page_height));
+
+		// Dynamically set the margin of the "stageRateText" for different screen sizes
+		ViewGroup.MarginLayoutParams stageRateTextLP = (ViewGroup.MarginLayoutParams) stageRateText.getLayoutParams();
+		stageRateTextLP.setMargins( 0, (int) (normalPageHeightMultScreen * 280 / 342 ), 0, 0 );
+		view.requestLayout();
+		stageRateText.setLayoutParams(stageRateTextLP);
+
+		if (pageWidget != null) {
+			if (pageWidget.getParent() != null
+					&& pageWidget.getParent().equals(pageLayout))
+				pageLayout.removeView(pageWidget);
+			pageWidget.clear();
+			pageWidget = null;
+		}
+
+		pageWidget = new PageWidgetVertical(getActivity());
+		pageLayout.addView(pageWidget, 0);
+
+		while( page_states == null ){
+			page_states = db.getDetectionScoreByWeek();
+			page_week = page_states.length - 1;
+		}
+		Integer score = page_states[page_week];
+		Bitmap tmp = BitmapFactory
+			.decodeResource(App.getContext().getResources(),
+					StorytellingGraphics.getPage(score, page_week));
+
+		cur_bg_bmp = Bitmap.createScaledBitmap(tmp, page_width, page_height,
+				true);
+		tmp.recycle();
+
+		pageWidget.setting(page_width, page_height);
+		pageWidget.setBitmaps(cur_bg_bmp, next_bg_bmp);
+		pageWidget.setOnTouchListener(gtListener);
+
+		pageWidget.invalidate();
+
 		if( getIsNeedMore() )
 			moreButton.setVisibility(View.VISIBLE);
 		quoteText.setVisibility(View.VISIBLE);
-		stageRateText.setVisibility(View.VISIBLE);
 
 		moreBackground.setVisibility(View.INVISIBLE);
 		moreQuote.setVisibility(View.INVISIBLE);
-		moreProcess.setVisibility(View.INVISIBLE);
 		isMoreOpened = false;
 	}
 
@@ -1278,20 +1386,6 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 	}
 
 	private void setMoreTexts() {
-		Integer score = page_states[page_week];
-		float progress = Detection.weeklyScoreToProgress(score.intValue());
-		String stageText = String.valueOf(page_week + 1);
-		String progress_str = format.format(progress) + "%\n";
-		Spannable p_str = new SpannableString(progress_str + doneStr);
-		p_str.setSpan(new CustomTypefaceSpan("c1", digitTypefaceBold,
-				value_color), 0, progress_str.length(),
-				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-		p_str.setSpan(
-				new CustomTypefaceSpan("c2", wordTypefaceBold, text_color),
-				progress_str.length(),
-				progress_str.length() + doneStr.length(),
-				Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-		moreProcess.setText(p_str);
 		moreQuote.setText(QUOTE_STR[page_week % (MAX_PAGE_WEEK + 1)]);
 	}
 
@@ -1300,5 +1394,4 @@ public class StorytellingFragment extends Fragment implements EnablePage,
 		return
 			(page_week % (MAX_PAGE_WEEK + 1) != 2) && (page_week % (MAX_PAGE_WEEK + 1) != 10);
 	}
-
 }

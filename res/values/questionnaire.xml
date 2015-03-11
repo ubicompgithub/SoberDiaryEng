@@ -8,7 +8,7 @@
     <string name= "breath_check_help">I\'ll finish focusing on breathing</string>
     <string name="inspire_help">Meditate on an inspira-\ntional quote for 30 s</string>
     <string name="start_emotion_diy_help">Prevent alcohol cravings using Skill Suggestion</string>
-    <string name="read_sentence">Read heart-warming words to change your mood</string>
+    <string name="read_sentence">Read some heart-warming words</string>
     <string name="try_again">Re-test after the breathalyzer recovers</string>
     <string name="self_help">Handle and face the problem on your own</string>
     <string name="go_home">Go home and rest</string>

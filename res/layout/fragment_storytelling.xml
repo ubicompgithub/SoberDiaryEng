@@ -53,7 +53,8 @@
         android:id="@+id/story_top_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/story_chart_area_layout" >
+        android:layout_above="@+id/story_chart_area_layout"
+         >
 
         <RelativeLayout
             android:id="@+id/story_book_layout"
@@ -140,8 +141,8 @@
             android:id="@+id/story_stage_rate"
             android:layout_width="48dp"
             android:layout_height="42dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="240dp"
             android:layout_marginLeft="6.7dp"
             android:gravity="center"
             android:textSize="14sp" />
@@ -150,8 +151,7 @@
             android:id="@+id/story_quote_scroll_view"
             android:layout_width="wrap_content"
             android:layout_height="42dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="16dp"
+            android:layout_alignTop="@+id/story_stage_rate"
             android:layout_toRightOf="@+id/story_stage_rate"
             android:scrollbars="none"
             android:visibility="invisible" >
@@ -208,47 +208,27 @@
 
             </LinearLayout>
         </ScrollView>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="225dp"
-        android:layout_alignTop="@+id/story_quote_scroll_view"
-        android:layout_alignParentBottom="true" >
-
-        <ImageView
-            android:id="@+id/story_page_more_background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="matrix"
-            android:visibility="invisible"
-            android:clickable="true"
-            android:src="@drawable/more_background2" />
-
-        <TextView
+		<TextView
             android:id="@+id/story_page_more_quote"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/story_page_more_process"
-            android:textAlignment="textStart"
+            android:layout_alignTop="@+id/story_stage_rate"
+            android:layout_toRightOf="@+id/story_stage_rate"
             android:text="Alcohol is the worst enemy. Don\&apos;t let it master you. Never give up!"
             android:textSize="14dp"
             android:textColor="@color/page_gray"
             android:visibility="invisible" />
-        
-        <TextView
-            android:id="@+id/story_page_more_process"
-            android:layout_width="48dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="6.7dp"
-            android:gravity="center"
-            android:text="Proc"
-            android:textSize="14sp"
-            android:visibility="invisible" />
-
-        
-
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/story_page_more_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/story_top_layout"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/more_background"
+        android:visibility="invisible" />
+
 
 </RelativeLayout>

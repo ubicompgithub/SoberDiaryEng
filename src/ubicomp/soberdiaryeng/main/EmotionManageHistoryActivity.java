@@ -56,7 +56,7 @@ public class EmotionManageHistoryActivity extends Activity {
 		titleLayout = (LinearLayout) this.findViewById(R.id.emotion_manage_title_layout);
 		main = (LinearLayout) this.findViewById(R.id.emotion_manage_main_layout);
 
-		View title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_history_title) + "　"
+		View title = BarButtonGenerator.createTitleView(getString(R.string.emotion_manage_history_title) + " "
 				+ curTV.toSimpleDateString());
 		titleLayout.addView(title);
 
