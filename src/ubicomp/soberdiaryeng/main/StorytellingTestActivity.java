@@ -59,8 +59,6 @@ public class StorytellingTestActivity extends Activity {
 	private TextView agreementText;
 	private String[] agreementLevel;
 
-	// private static final String[] labels = { "A.", "B.", "C." }; // BlueZhong 
-
 	private static final int MIN_BARS = ScreenSize.getMinBars();
 
 	@Override
@@ -205,8 +203,6 @@ public class StorytellingTestActivity extends Activity {
 		selections[2] = (RadioButton) layout.findViewById(R.id.question_select2);
 
 		for (int i = 0; i < selectionStrs.length; ++i) {
-			// BlueZhong 
-			// selections[i].setText(labels[i] + selectionStrs[i]);
 			selections[i].setText(selectionStrs[i]);
 
 			selections[i].setOnCheckedChangeListener(new SelectionChangeListener());
@@ -263,14 +259,13 @@ public class StorytellingTestActivity extends Activity {
 				for (int i = 0; i < selections.length; ++i){
 					if (selections[i].getId() != buttonView.getId()){
 						selections[i].setChecked(false);
-						selections[i].setTextColor( getResources().getColor(R.color.text_gray) );   //BlueZhong  !!!!!!!!!!!!!!!!
+						selections[i].setTextColor( getResources().getColor(R.color.text_gray) );
 					}
 					else{
-						selections[i].setTextColor( getResources().getColor(R.color.orange) );  //BlueZhong  !!!!!!!!!!!!!!!!
+						selections[i].setTextColor( getResources().getColor(R.color.orange) );
 					}
 				}
-				// selectedAnswer = buttonView.getText().toString().substring(2);  //BlueZhong  Need to be modified cause I removed the A. B. C. !!!!!!!!!!!!!!!! 
-				selectedAnswer = buttonView.getText().toString();  //BlueZhong  !!!!!!!!!!!!!!!! 
+				selectedAnswer = buttonView.getText().toString();
 			}
 		}
 	}
