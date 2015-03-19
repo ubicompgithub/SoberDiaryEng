@@ -126,25 +126,25 @@ public class PreSettingActivity extends Activity {
 
 		updateDisplay();
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("確定清除點數?");
-		builder.setPositiveButton("確定", new CleanListener());
-		builder.setNegativeButton("取消", null);
+		builder.setTitle("Clean the credits?");
+		builder.setPositiveButton("OK", new CleanListener());
+		builder.setNegativeButton("Cancel", null);
 		AlertDialog cleanAlertDialog = builder.create();
 		exchangeButton = (Button) this.findViewById(R.id.clean_OK);
 		exchangeButton.setOnClickListener(new AlertOnClickListener(cleanAlertDialog));
 
 		builder = new AlertDialog.Builder(this);
-		builder.setTitle("回復資料?");
-		builder.setPositiveButton("確定", new RestoreOnClickListener());
-		builder.setNegativeButton("取消", null);
+		builder.setTitle("Restore the data?");
+		builder.setPositiveButton("OK", new RestoreOnClickListener());
+		builder.setNegativeButton("Cancel", null);
 		AlertDialog resotreAlertDialog = builder.create();
 		restoreButton = (Button) this.findViewById(R.id.restore);
 		restoreButton.setOnClickListener(new AlertOnClickListener(resotreAlertDialog));
 
 		builder = new AlertDialog.Builder(this);
-		builder.setTitle("由SoberDiary Ver1回復資料?");
-		builder.setPositiveButton("確定", new RestoreVer1OnClickListener());
-		builder.setNegativeButton("取消", null);
+		builder.setTitle("Restore the data from SoberDiary Ver1?");
+		builder.setPositiveButton("OK", new RestoreVer1OnClickListener());
+		builder.setNegativeButton("Cancel", null);
 		AlertDialog resotreAlertDialogVer1 = builder.create();
 		restoreVer1Button = (Button) this.findViewById(R.id.restore_ver1);
 		restoreVer1Button.setOnClickListener(new AlertOnClickListener(resotreAlertDialogVer1));
@@ -160,10 +160,10 @@ public class PreSettingActivity extends Activity {
 		debugButton.setOnClickListener(new DebugOnClickListener());
 
 		builder = new AlertDialog.Builder(this);
-		builder.setTitle("使用Dummy Data?");
-		builder.setMessage("使用後將會清除現有資料");
-		builder.setPositiveButton("確定", new DummyDataOnClickListener());
-		builder.setNegativeButton("取消", null);
+		builder.setTitle("Create dummy data?");
+		builder.setMessage("Current data will be deleted once you create dummy data!");
+		builder.setPositiveButton("OK", new DummyDataOnClickListener());
+		builder.setNegativeButton("Cancel", null);
 		AlertDialog dummyDataDialog = builder.create();
 		dummyDataButton = (Button) findViewById(R.id.debug_dummy_data);
 		dummyDataButton.setOnClickListener(new AlertOnClickListener(dummyDataDialog));

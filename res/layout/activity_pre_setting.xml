@@ -209,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/setting_title_bg_color"
                 android:padding="5dp"
-                android:text="User\&apos;s Target  Setting"
+                android:text="User\&apos;s Target Setting"
                 android:textColor="@color/white"
                 android:textSize="@dimen/large_title_size" />
 
